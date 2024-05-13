@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Bebidas</title>
+  <link rel="stylesheet" href="estiloalcohol.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-************" crossorigin="anonymous" />
+</head>
+<body>
+  <header>
+    
+
+    <div class="main-header">
+      <a href="inicio.html">
+        <div class="logoinsano">
+          <img src="img/logofinal3.png" alt="logo">
+        </div>
+      </a>
+
+      <div class="buscador">
+        <input class="buscador-input" type="text"
+          placeholder="¿Qué estás buscando?">
+      </div>
+      <div class="icon1">
+        <a href="registro.html" class="cart-icon1">
+          <i class="fas fa-user"></i>
+        </a>
+        <span class="icon-text">Usuario</span>
+      </div>
+      <div class="icon2">
+        <a href="#" class="cart-icon" id="cart-icon">
+          <i class="fa fa-shopping-cart"></i>
+          <span id="cart-count">0</span>
+        </a> 
+        <span class="icon-text">Carrito</span>
+      </div>
+    </div>
+    <nav>
+      <div class="dropdown">
+        <a href="inicio.html">PAGINA INICIO </a>
+      </div>
+
+      <div class="dropdown">
+        <a href="vinos.html">OFERTAS</a>
+        <div class="dropdown-menu">
+          <a href="vinos.html">Ofertas de La Semana</a>
+          <a href="vinos.html">Recetas</a>
+
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="cervezas.html">CERVEZAS</a>
+        <div class="dropdown-menu">
+          <a href="cervezas.html">Artesanales </a>
+          <a href="cervezas.html">Nacional </a>
+          <a href="cervezas.html">Importada</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="vinos.html">VINOS</a>
+        <div class="dropdown-menu">
+          <a href="vinos.html">Vinos Tintos </a>
+          <a href="vinos.html">Vinos Blancos</a>
+
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="destilados.html">DESTILADOS</a>
+        <div class="dropdown-menu">
+          <a href="destilados.html">Whisky</a>
+          <a href="destilados.html">Tequila</a>
+          <a href="destilados.html">Pisco</a>
+          <a href="destilados.html">Gin</a>
+          <a href="destilados.html">Vodka</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="licores.html">LICORES</a>
+        <div class="dropdown-menu">
+          <a href="licores.html">Mix Cocktails</a>
+          <a href="licores.html">Sour</a>
+          <a href="licores.html">Variedad Cocktails</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="bebidas.html">BEBIDAS</a>
+        <div class="dropdown-menu">
+          <a href="bebidas.html">Gaseosa</a>
+          <a href="bebidas.html">Minerales</a>
+          <a href="bebidas.html">Jugos</a>
+        </div>
+      </div>
+
+      
+    </nav>
+  </header>
+
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>CATEGORÍA</h3>
+      <p id="categoria-selected">Vinos</p>
+      
+      <h3>PRECIOS</h3>
+      <ul>
+        <li><a href="#" data-precio="5000-10000">$5.000 - $10.000</a></li>
+        <li><a href="#" data-precio="10000-15000">$10.000 - $15.000</a></li>
+        <li><a href="#" data-precio="15000-20000">$15.000 - $20.000</a></li>
+        <li><a href="#" data-precio="20000+">Más de $20.000</a></li>
+      </ul>
+      
+    </div>
+
+
+
+
+
+
+
+  <main>
+    <section class="product-section" id="vinos-tintos">
+      <h2>Categoría: Mix Cocktails</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://brindo.cl/1105-large_default/campanario-pina-colada-12-700cc.jpg" alt="Producto 1">
+          <h3>Campanario Piña Colada 12° Botella 700cc</h3>
+          <p class="price">$5.990 <span class="discount">-15%</span></p>
+          <button data-producto='{"id": 1, "nombre": "Campanario Piña Colada 12° Botella 700cc", "precio": 5900, "descuento": 15, "imagen": "https://brindo.cl/1105-large_default/campanario-pina-colada-12-700cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/663-large_default/1x-la-pizka-sour-maracuya-24-botella-1000cc.jpg" alt="Producto 1">
+          <h3>La Pizka Sour Maracuyá 24° Botella 1000cc</h3>
+          <p class="price">$15.990 <span class="discount">-10%</span></p>
+          <button data-producto='{"id": 57, "nombre": "La Pizka Sour Maracuyá 24° Botella 1000cc", "precio": 15900, "descuento": 10, "imagen": "https://brindo.cl/663-large_default/1x-la-pizka-sour-maracuya-24-botella-1000cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/655-large_default/1x-tarapaca-reserva-cabernet-sauvignon-botella-750cc.jpg" alt="Producto 1">
+          <h3>Tarapacá Reserva Cabernet Sauvignon Botella 750cc</h3>
+          <p class="price">$9.990 <span class="discount">-13%</span></p>
+          <button data-producto='{"id": 58, "nombre": "Tarapacá Reserva Cabernet Sauvignon Botella 750cc", "precio": 6900, "descuento": 13, "imagen": "https://brindo.cl/655-large_default/1x-tarapaca-reserva-cabernet-sauvignon-botella-750cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/348-large_default/1x-aba-limon-sour-12-750cc.jpg" alt="Producto 1">
+          <h3>Aba Limón Sour 12° 750cc</h3>
+          <p class="price">$9.500 <span class="discount">-20%</span></p>
+          <button data-producto='{"id": 59, "nombre": "Aba Limón Sour 12° 750cc", "precio": 9500, "descuento": 20, "imagen": "https://brindo.cl/348-large_default/1x-aba-limon-sour-12-750cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/353-large_default/1x-baileys-17-botella-750cc.jpg" alt="Producto 1">
+          <h3>Baileys 17° Botella 750cc</h3>
+          <p class="price">$19.900 <span class="discount">-25%</span></p>
+          <button data-producto='{"id": 60, "nombre": "Casillero del Diablo Merlot Botella 750cc", "precio": 4590, "descuento": 7, "imagen": "https://brindo.cl/353-large_default/1x-baileys-17-botella-750cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/1055-large_default/1x-ruibarbo-sour-botella-750gr.jpg" alt="Producto 1">
+          <h3>Ruibarbo Sour Botella 750gr</h3>
+          <p class="price">$8.900 <span class="discount">-10%</span></p>
+          <button data-producto='{"id": 61, "nombre": "Ruibarbo Sour Botella 750gr", "precio": 8900, "descuento": 10, "imagen": "https://brindo.cl/1055-large_default/1x-ruibarbo-sour-botella-750gr.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/3284-large_default/1x-campanario-seleccion-creme-14-700cc.jpg" alt="Producto 1">
+          <h3>Campanario Selección Creme 14° 700cc</h3>
+          <p class="price">$10.990 <span class="discount">-55%</span></p>
+          <button data-producto='{"id": 62, "nombre": "Casillero del Diablo Syrah Botella 750cc", "precio": 10990, "descuento": 55, "imagen": "https://brindo.cl/3284-large_default/1x-campanario-seleccion-creme-14-700cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/3291-large_default/1x-la-pizka-cocktail-pina-colada-13-botella-de-vidrio-1000cc.jpg" alt="Producto 1">
+          <h3>La Pizka Cocktail Piña Colada 13° Botella de Vidrio 1000cc</h3>
+          <p class="price">$9.990 <span class="discount">-7%</span></p>
+          <button data-producto='{"id": 63, "nombre": "La Pizka Cocktail Piña Colada 13° Botella de Vidrio 1000cc", "precio": 9900, "descuento": 7, "imagen": "https://brindo.cl/3291-large_default/1x-la-pizka-cocktail-pina-colada-13-botella-de-vidrio-1000cc.jpg"}'>AGREGAR</button>
+        </div>
+               
+      </div>
+    </section>
+    
+    <main>
+      <section class="product-section" id="vinos-blancos">
+        <h2>Categoría: Sour</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://brindo.cl/156-thickbox_default/1x-campanario-sour-mango-12-botella-700cc.jpg" alt="Producto 1">
+            <h3>Campanario Sour Mango 12° Botella 700cc</h3>
+            <p class="price">$5.990 <span class="discount">-25%</span></p>
+            <button data-producto='{"id": 64, "nombre": "Campanario Sour Mango 12° Botella 700cc", "precio": 5990, "descuento": 25, "imagen": "https://brindo.cl/156-thickbox_default/1x-campanario-sour-mango-12-botella-700cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/348-large_default/1x-aba-limon-sour-12-750cc.jpg" alt="Producto 1">
+            <h3>Aba Limón Sour 12° 750cc</h3>
+            <p class="price">$9.500 <span class="discount">-24%</span></p>
+            <button data-producto='{"id": 65, "nombre": "Aba Limón Sour 12° 750cc", "precio": 9500, "descuento": 24, "imagen": "https://brindo.cl/348-large_default/1x-aba-limon-sour-12-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/345-large_default/1x-aba-mango-sour-12-750cc.jpg" alt="Producto 1">
+            <h3>Aba Mango Sour 12° 750cc</h3>
+            <p class="price">$6.500 <span class="discount">-32%</span></p>
+            <button data-producto='{"id": 66, "nombre": "Aba Mango Sour 12° 750cc", "precio": 6500, "descuento": 32, "imagen": "https://brindo.cl/345-large_default/1x-aba-mango-sour-12-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/153-large_default/1x-campanario-sour-16-botella-700cc.jpg" alt="Producto 1">
+            <h3>Campanario Sour 16° Botella 700cc</h3>
+            <p class="price">$5.000 <span class="discount">-10%</span></p>
+            <button data-producto='{"id": 67, "nombre": "Campanario Sour 16° Botella 700cc", "precio": 5000, "descuento": 10, "imagen": "https://brindo.cl/153-large_default/1x-campanario-sour-16-botella-700cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/1055-large_default/1x-ruibarbo-sour-botella-750gr.jpg" alt="Producto 1">
+            <h3>Ruibarbo Sour Botella 750gr</h3>
+            <p class="price">$8.900 <span class="discount">-21%</span></p>
+            <button data-producto='{"id": 68, "nombre": "Ruibarbo Sour Botella 750gr", "precio": 8000, "descuento": 21, "imagen": "https://brindo.cl/1055-large_default/1x-ruibarbo-sour-botella-750gr.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/3242-large_default/1x-virrey-del-peru-sour-limon-botella-1000cc.jpg" alt="Producto 1">
+            <h3>Virrey del Perú Sour Limón Botella 1000cc</h3>
+            <p class="price">$7.200 <span class="discount">-12%</span></p>
+            <button data-producto='{"id": 69, "nombre": "Virrey del Perú Sour Limón Botella 1000cc", "precio": 7200, "descuento": 12, "imagen": "https://brindo.cl/3242-large_default/1x-virrey-del-peru-sour-limon-botella-1000cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/3241-large_default/1x-virrey-del-peru-sour-mango-botella-1000cc.jpg" alt="Producto 1">
+            <h3>Virrey del Perú Sour Mango Botella 1000cc</h3>
+            <p class="price">$7.200 <span class="discount">-40%</span></p>
+            <button data-producto='{"id": 70, "nombre": "Virrey del Perú Sour Mango Botella 1000cc", "precio": 7200, "descuento": 40, "imagen": "https://brindo.cl/3241-large_default/1x-virrey-del-peru-sour-mango-botella-1000cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/3244-large_default/1x-secreto-peruano-sour-mango-botella-1000cc.jpg" alt="Producto 1">
+            <h3>Secreto Peruano Sour Mango Botella 1000cc</h3>
+            <p class="price">$6.200 <span class="discount">-25%</span></p>
+            <button data-producto='{"id": 71, "nombre": "Secreto Peruano Sour Mango Botella 1000cc", "precio": 6200, "descuento": 25, "imagen": "https://brindo.cl/3244-large_default/1x-secreto-peruano-sour-mango-botella-1000cc.jpg"}'>AGREGAR</button>
+          </div>
+          
+        </div>
+      </section>
+      
+      <main>
+        <section class="product-section" id="espumantes">
+          <h2>Categoría: variedad  Cocktails</h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="https://brindo.cl/382-large_default/1x-malibu-20-botella-750cc.jpg" alt="Producto 1">
+              <h3>Malibú 20° Botella 750cc</h3>
+              <p class="price">$12.900 <span class="discount">-10%</span></p>
+              <button data-producto='{"id": 72, "nombre": "Malibú 20° Botella 750cc", "precio": 12900, "descuento": 10, "imagen": "https://brindo.cl/382-large_default/1x-malibu-20-botella-750cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/746-large_default/1x-diamante-centenario-16-botella-750cc.jpg" alt="Producto 1">
+              <h3>Diamante Centenario 16° Botella 750cc</h3>
+              <p class="price">$8.600 <span class="discount">-22%</span></p>
+              <button data-producto='{"id": 73, "nombre": "Diamante Centenario 16° Botella 750cc", "precio": 8600, "descuento": 22, "imagen": "https://brindo.cl/746-large_default/1x-diamante-centenario-16-botella-750cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/745-large_default/1x-amarula-17-botella-750cc.jpg" alt="Producto 1">
+              <h3>Amarula 17° Botella 750cc</h3>
+              <p class="price">$17.990 <span class="discount">-30%</span></p>
+              <button data-producto='{"id": 74, "nombre": "Amarula 17° Botella 750cc", "precio": 17990, "descuento": 30, "imagen": "https://brindo.cl/745-large_default/1x-amarula-17-botella-750cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/355-large_default/1x-ramazzotti-15-botella-700cc.jpg" alt="Producto 1">
+              <h3>Ramazzotti 15° Botella 700cc</h3>
+              <p class="price">$14.900 <span class="discount">-25%</span></p>
+              <button data-producto='{"id": 75, "nombre": "Ramazzotti 15° Botella 700cc", "precio": 14900, "descuento": 25, "imagen": "https://brindo.cl/355-large_default/1x-ramazzotti-15-botella-700cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/1115-large_default/friendly-url-autogeneration-failed.jpg" alt="Producto 1">
+              <h3>Vermouth Martini Rosso 16° Botella 750cc</h3>
+              <p class="price">$6.900 <span class="discount">-12%</span></p>
+              <button data-producto='{"id": 76, "nombre": "Vermouth Martini Rosso 16° Botella 750cc", "precio": 6900, "descuento": 12, "imagen": "https://brindo.cl/1115-large_default/friendly-url-autogeneration-failed.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/1117-large_default/1x-st-germain-20-botella-750cc.jpg" alt="Producto 1">
+              <h3>Grand Marnier Cordon Rouge 40° Botella 700cc</h3>
+              <p class="price">$42.990 <span class="discount">-70%</span></p>
+              <button data-producto='{"id": 77, "nombre": "Grand Marnier Cordon Rouge 40° Botella 700cc", "precio": 42990, "descuento": 70, "imagen": "https://brindo.cl/1117-large_default/1x-st-germain-20-botella-750cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/361-large_default/1x-duval-curacao-blue-34-botella-750cc.jpg" alt="Producto 1">
+              <h3>Duval Curacao Blue 34° Botella 750cc</h3>
+              <p class="price">$7.500 <span class="discount">-13%</span></p>
+              <button data-producto='{"id": 78, "nombre": "Duval Curacao Blue 34° Botella 750cc", "precio": 7500, "descuento": 13, "imagen": "https://brindo.cl/361-large_default/1x-duval-curacao-blue-34-botella-750cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/373-large_default/1x-aguardiente-donihue-50-botella-900cc.jpg" alt="Producto 1">
+              <h3>Aguardiente Doñihue 50° Botella 900cc</h3>
+              <p class="price">$5.900 <span class="discount">-7%</span></p>
+              <button data-producto='{"id": 79, "nombre": "Aguardiente Doñihue 50° Botella 900cc", "precio": 5900, "descuento": 7, "imagen": "https://brindo.cl/373-large_default/1x-aguardiente-donihue-50-botella-900cc.jpg"}'>AGREGAR</button>
+            </div>
+            
+          </div>
+        </section>
+
+  </main>
+</div>
+
+
+<div class="cart-overlay" id="cart-overlay">
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Carrito de Compras</h3>
+      <i class="fas fa-times close-cart" id="close-cart"></i>
+    </div>
+    <div id="cart-items">
+      <!-- -->
+    </div>
+    <div class="cart-actions">
+      <button id="realizar-compra">Realizar compra</button>
+    </div>
+    <div class="cart-totals">
+      <p>Total: <span id="cart-total">$0</span></p>
+      <button id="clear-cart">Vaciar Carrito</button>
+    </div>
+  </div>
+</div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>LA BARRA</h4>
+        <p>600 450 2502</p>
+      </div>
+      <div class="footer-col">
+        <h4>Información</h4>
+        <ul>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Políticas de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Medios de pago</h4>
+        <ul class="payment-icons">
+          <li><img src="ruta/banco-de-chile.png" alt="Banco de Chile"></li>
+          <li><img src="webpay.png" alt="Webpay Plus"></li>
+          <li><img src="mercado-pago.png" alt="Mercado Pago"></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script src="scriptalcohol.js"></script>
+</body>
+</html>

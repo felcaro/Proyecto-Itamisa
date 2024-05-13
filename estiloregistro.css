@@ -1,0 +1,473 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Estilos para la barra superior */
+.top-bar {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  align-items: center;
+  top: 10px;
+}
+
+.top-bar-links {
+  margin-left: 10px;
+}
+
+.top-bar-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.icons a {
+  color: #333;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+
+/* LOGOS Y NOMBRE PRINCIPAL */
+.logoinsano {
+  flex: 0 0 auto;
+  margin-left: 7%;
+}
+
+.logoinsano img {
+  max-width: 20vw;
+  min-width: 10vw;
+
+}
+
+/* Estilos para la barra superior */
+.location-menu {
+  display: none;
+  position: absolute;
+  margin-top: 5px;
+  margin-right: 25px;
+  background-color: #010101;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  border: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #e2dddd;
+}
+
+.location-menu a {
+  color: #e2dddd;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.location-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.location-dropdown .location {
+  cursor: pointer;
+  float: left;
+}
+
+.location-dropdown i {
+  margin-right: 5px;
+  margin-left: 6px;
+}
+
+.location input {
+  text-align: center;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  max-width: 150px;
+  font-size: 16px;
+  height: 25px;
+}
+
+.location-dropdown:hover .location-menu {
+  display: block;
+}
+
+/* Estilos para el encabezado principal */
+.main-header {
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+
+}
+
+.buscador {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.buscador .buscador-input {
+  border: none;
+  border-radius: 15px;
+  outline: 1px solid #ff6600;
+  color: #000;
+  background-color: #e2e2e2;
+  outline-offset: 2px;
+  padding: 10px 1rem;
+  transition: 1s;
+  text-align: center;
+  max-width: 40vw;
+  min-width: 130px;
+  width: 30%;
+  font-size: 1vw;
+  height: 30px;
+}
+
+.buscador input:focus {
+  width: 100%;
+  outline-offset: 2px;
+  background-color: #ffffff;
+  outline: 2.5px solid #000000;
+}
+
+
+.icon1 {
+  margin-right: 8vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #000000;
+  font-size: 14px;
+}
+
+.icon2 {
+  margin-right: 1vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #000000;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.icon2,
+.icon1 a {
+  color: #000000;
+  font-size: 130%;
+  text-decoration: none;
+}
+
+.icon1 .icon-text,
+.icon2 .icon-text {
+  color: #000000;
+  font-size: 14px;
+}
+
+.cart-icon2 {
+  text-decoration: none;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  height: 35px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: #333;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+}
+
+.dropdown-menu {
+  top: 35px;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 1px solid #ccc;
+}
+
+.dropdown-menu a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: start;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown:hover>a {
+  border-bottom: 2px solid #ff6600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el contenido principal */
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.forgot-password {
+  color: #666;
+  text-decoration: none;
+  margin-bottom: 15px;
+  align-self: flex-end;
+}
+.login-register-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login, .register {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+  width: 400px;
+}
+
+.login h2, .register h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.login form, .register form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login form label, .register form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login form input, .register form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.remember label {
+  margin-left: 5px;
+}
+
+.remember a {
+  margin-left: auto;
+  color: #666;
+  text-decoration: none;
+}
+
+.login form button, .register form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login form button:hover, .register form button:hover {
+  background-color: #555;
+}
+
+.register p {
+  font-size: 12px;
+  color: #666;
+  margin-top: 20px;
+}
+
+
+
+
+/* Estilos para la sección de APIs */
+.api-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.api-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.api-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.api-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.api-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.api-card p {
+  margin-bottom: 15px;
+}
+
+.api-link {
+  display: inline-block;
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.api-link:hover {
+  background-color: #e65c00;
+}
+
+/* logo banner registro */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.banner img {
+  border-radius: 20px;
+  max-width: 100%;  
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #333;
+  color: #f9f9f9;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex-basis: 25%;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-col p,
+.footer-col1 a,
+.footer-col2 a {
+  color: #f9f9f9;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.footer-col1 ul,
+.footer-col2 ul,
+.footer-col3 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col1 li,
+.footer-col2 li,
+.footer-col3 li {
+  margin-bottom: 5px;
+}
+
+.footer-col1 a:hover,
+.footer-col2 a:hover {
+  color: #ff6600;
+}
+
+.payment-icons li {
+  margin-right: 10px;
+  display: inline-block;
+}

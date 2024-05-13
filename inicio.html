@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Blacks</title>
+    <link rel="stylesheet" href="estiloinicio.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-************" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="top-bar-links">
+          <a href="#">BLOG </a>
+          <a href="#">|</a>
+          <a href="#">SUSCRIPCIONES </a>
+          <a href="#">|</a>
+          <a href="#suscribirse">ÚNETENOS </a>
+
+        </div>
+        <div id="location-dropdown">
+          <div id="location-info">
+            <button id="dropdown-toggle">Elegir ubicación</button>
+            <span id="selected-location"></span>
+          </div>
+          <div id="dropdown-menu" class="hidden"></div>
+        </div>
+      </div>
+
+      <div class="main-header">
+        <a href="inicio.html">
+          <div class="logoinsano">
+            <img src="img/logofinal3.png" alt="logo">
+          </div>
+        </a>
+  
+        <div class="buscador">
+          <input class="buscador-input" type="text"
+            placeholder="¿Qué estás buscando?">
+        </div>
+        <div class="icon1">
+          <a href="registro.html" class="cart-icon1">
+            <i class="fas fa-user"></i>
+          </a>
+          <span class="icon-text">Usuario</span>
+        </div>
+        <div class="icon2">
+          <a href="#" class="cart-icon" id="cart-icon">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+          </a> 
+          <span class="icon-text">Carrito</span>
+        </div>
+      </div>
+      <nav>
+        <div class="dropdown">
+          <a href="vinos.html">OFERTAS</a>
+          <div class="dropdown-menu">
+            <a href="vinos.html">Ofertas de La Semana</a>
+            <a href="vinos.html">Recetas</a>
+  
+          </div>
+        </div>
+  
+        <div class="dropdown">
+          <a href="cervezas.html">CERVEZAS</a>
+          <div class="dropdown-menu">
+            <a href="cervezas.html">Artesanales </a>
+            <a href="cervezas.html">Nacional </a>
+            <a href="cervezas.html">Importada</a>
+          </div>
+        </div>
+  
+        <div class="dropdown">
+          <a href="vinos.html">VINOS</a>
+          <div class="dropdown-menu">
+            <a href="vinos.html">Vinos Tintos </a>
+            <a href="vinos.html">Vinos Blancos</a>
+  
+          </div>
+        </div>
+  
+        <div class="dropdown">
+          <a href="destilados.html">DESTILADOS</a>
+          <div class="dropdown-menu">
+            <a href="destilados.html">Whisky</a>
+            <a href="destilados.html">Tequila</a>
+            <a href="destilados.html">Pisco</a>
+            <a href="destilados.html">Gin</a>
+            <a href="destilados.html">Vodka</a>
+          </div>
+        </div>
+  
+        <div class="dropdown">
+          <a href="licores.html">LICORES</a>
+          <div class="dropdown-menu">
+            <a href="licores.html">Mix Cocktails</a>
+            <a href="licores.html">Sour</a>
+            <a href="licores.html">Variedad Cocktails</a>
+          </div>
+        </div>
+  
+        <div class="dropdown">
+          <a href="bebidas.html">BEBIDAS</a>
+          <div class="dropdown-menu">
+            <a href="bebidas.html">Gaseosa</a>
+            <a href="bebidas.html">Minerales</a>
+            <a href="bebidas.html">Jugos</a>
+          </div>
+        </div>
+  
+        
+      </nav>
+
+
+
+      <div class="mobile-menu">
+        <i class="fas fa-bars"></i> Menú
+      </div>
+      <div class="mobile-nav">
+        <a href="#">OFERTAS</a>
+        <div class="dropdown-menu">
+          <a href="vinos.html">Ofertas de La Semana</a>
+          <a href="vinos.html">Recetas</a>
+        </div>
+        <a href="cervezas.html">CERVEZAS</a>
+        <div class="dropdown-menu">
+          <a href="cervezas.html">Artesanales</a>
+          <a href="cervezas.html">Nacional</a>
+          <a href="cervezas.html">Importada</a>
+        </div>
+        <!-- Agrega el resto de las opciones de navegación aquí -->
+      </div>
+    </header>
+
+    <br>
+
+
+   
+
+
+    <div class="carousel">
+      <div><img
+          src="https://dondelanegra.cl/wp-content/uploads/2024/04/DM_Tanqueray_Bayleys.jpg"
+          alt="Imagen 1"></div>
+      <div><img
+          src="https://dondelanegra.cl/wp-content/uploads/2024/04/CH_banner_650x778_la_negra.png"
+          alt="Imagen 2"></div>
+      <div><img
+          src="https://dondelanegra.cl/wp-content/uploads/2024/04/DM_ColdBreak.jpg"
+          alt="Imagen 3"></div>
+      <div><img
+          src="https://dondelanegra.cl/wp-content/uploads/2024/05/BANNER-CASTILLO-MOLINA-1080-x-1293.png"
+          alt="Imagen 3"></div>
+      <div><img
+          src="https://dondelanegra.cl/wp-content/uploads/2024/04/DM_AperolJackAsti.jpg"
+          alt="Imagen 3"></div>
+      <div><img
+          src="https://dondelanegra.cl/wp-content/uploads/2024/05/Banners_PiscoEnvioGratis.jpg"
+          alt="Imagen 3"></div>
+      <div><img
+          src="https://dondelanegra.cl/wp-content/uploads/2024/04/Caidas_Otono-1.jpg"
+          alt="Imagen 3"></div>
+      <div><img
+          src="https://dondelanegra.cl/wp-content/uploads/2024/05/BANNER-CASTILLO-MOLINA-1080-x-1293.png"
+          alt="Imagen 3"></div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="titulo1">
+      <h2>NUESTROS RECOMENDADOS</h2>
+    </div>
+
+    <div class="productos-recomendados">
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="producto">
+            <div class="imagen-container">
+              <img
+                src="https://dondelanegra.cl/wp-content/uploads/2024/04/Misiones_A.webp"
+                alt="Producto 1" class="imagen-principal">
+              <img
+                src="https://dondelanegra.cl/wp-content/uploads/2024/04/Misiones_B.webp"
+                alt="Producto 1 Hover" class="imagen-hover">
+            </div>
+            <h3>MISIONES DE RENGO CARMENERE</h3>
+            <p>BOTELLA 750CC</p>
+            <p class="precio">
+              <span class="descuento">-22%</span>
+              <span class="precio-regular">$4.500</span>
+              <span class="precio-oferta">$3.690</span>
+              <span class="club">CLUB</span>
+            </p>
+            <button class="comprar-btn" data-producto='{"id": 40, "nombre": "Montes Limited Selection Carmenere Botella 750cc", "precio": 9900, "descuento": 12, "imagen": "https://brindo.cl/568-large_default/1x-montes-limited-selection-carmenere-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          
+        </div>
+        <div class="product-card">
+          <div class="producto">
+            <div class="imagen-container">
+              <img
+                src="https://dondelanegra.cl/wp-content/uploads/2024/04/BacardiRasp_A.webp"
+                alt="Producto 1" class="imagen-principal">
+              <img
+                src="https://dondelanegra.cl/wp-content/uploads/2024/04/BacardiRasp_B.webp"
+                alt="Producto 1 Hover" class="imagen-hover">
+            </div>
+            <h3>BACARDÍ RASPSBERRY</h3>
+            <p>BOTELLA 750CC</p>
+            <p class="precio">
+              <span class="descuento">-22%</span>
+              <span class="precio-regular">$7.990</span>
+              <span class="precio-oferta">$6.500</span>
+              <span class="club">CLUB</span>
+            </p>
+            <button class="comprar-btn" data-producto='{"id": 39, "nombre": "Bacardi Raspberry 750cc", "precio": 9900, "descuento": 12, "imagen": "https://dondelanegra.cl/wp-content/uploads/2020/09/BacardiRasp-1.jpg"}'>AGREGAR</button>
+          </div>
+          
+        </div>
+        <div class="product-card">
+          <div class="producto">
+            <div class="imagen-container">
+              <img
+                src="https://dondelanegra.cl/wp-content/uploads/2024/04/JohnnieBlonde_A.webp"
+                alt="Producto 1" class="imagen-principal">
+              <img
+                src="https://dondelanegra.cl/wp-content/uploads/2024/04/JohnnieBlonde_B.webp"
+                alt="Producto 1 Hover" class="imagen-hover">
+            </div>
+            <h3>JOHNNIE WALKER BLONDE</h3>
+            <p>BOTELLA 750CC</p>
+            <p class="precio">
+              <span class="descuento">-22%</span>
+              <span class="precio-regular">$24.000</span>
+              <span class="precio-oferta">$17.990</span>
+              <span class="club">CLUB</span>
+            </p>
+            <button class="comprar-btn" data-producto='{"id": 38, "nombre": "Johnnie Walker Blonde 750 ml", "precio": 24000, "descuento": 16, "imagen": "https://dondelanegra.cl/wp-content/uploads/2023/10/Johnnie-Walker-Blonde-750CC-40%C2%B0.jpg"}'>AGREGAR</button>
+          </div>
+        </div>
+        
+        
+      </div>
+
+    </div>
+
+    <div class="nuestras-recetas">
+      <h2>INFORMACION IMPORTANTE</h2>
+      <div class="recetas-container">
+        <div class="receta">
+          <img
+            src="https://dondelanegra.cl/wp-content/uploads/2021/11/Collins-Pomelo-.jpg"
+            alt="Receta 1">
+          <h3>COMO LEER UNA ETIQUETA DE VINO</h3>
+          <p>Porque todos deberíamos saber esto</p>
+          <a href="#" class="ver-receta">VER INFO</a>
+        </div>
+        <div class="receta">
+          <img
+            src="https://dondelanegra.cl/wp-content/uploads/2021/11/Noveno-Spritz-.jpg"
+            alt="Receta 2">
+          <h3>TOP COCTELES</h3>
+          <p>¡Descubre los mejores tragos de histora!</p>
+          <a
+            href="https://www.lavanguardia.com/magazine/experiencias/20210123/6185928/10-mejores-cocteles-todos-tiempos.html"
+            class="ver-receta">VER INFO</a>
+        </div>
+        <div class="receta">
+          <img
+            src="https://dondelanegra.cl/wp-content/uploads/2022/08/bulldog-receta-fentimans.jpg"
+            alt="Receta 3">
+          <h3>CREO QUE NO TOMAS SUFICIENTE AGUA</h3>
+          <p>Todo lo que debes saber sobre el agua mineral</p>
+          <a href="#" class="ver-receta">VER INFO</a>
+        </div>
+
+      </div>
+    </div>
+
+    
+    <div class="container">
+      <h1 class="recipe-title">RECETAS COCTELES</h1>
+      <div class="cocktail-container">
+        <!-- Aquí se agregarán las tarjetas de los cócteles -->
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <a href="#" target="_blank">
+          <img
+            src="https://dondelanegra.cl/wp-content/uploads/2022/06/TodoPiscos-400x400.jpg"
+            alt="Imagen 1">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="#" target="_blank">
+          <img
+            src="https://dondelanegra.cl/wp-content/uploads/2022/06/TodoVinos-400x400.jpg"
+            alt="Imagen 2">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="#" target="_blank">
+          <img
+            src="https://dondelanegra.cl/wp-content/uploads/2022/06/TodoWhiskey-400x400.jpg"
+            alt="Imagen 3">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="#" target="_blank">
+          <img
+            src="https://dondelanegra.cl/wp-content/uploads/2022/07/TodoTequila-400x400.jpg"
+            alt="Imagen 3">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="#" target="_blank">
+          <img
+            src="https://dondelanegra.cl/wp-content/uploads/2022/07/TodoGin-400x400.jpg"
+            alt="Imagen 3">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="#" target="_blank">
+          <img
+            src="https://dondelanegra.cl/wp-content/uploads/2022/06/TodoCervezas-400x400.jpg"
+            alt="Imagen 3">
+        </a>
+      </div>
+      <!-- Agrega más elementos .gallery-item para más imágenes -->
+    </div>
+
+    <div class="newsletter-container">
+      <div class="newsletter-content">
+        <h2>¡SUSCRÍBETE A NUESTRO SITIO WEB!</h2>
+        <input type="email" id="email-input" placeholder="Ingresa tu e-mail">
+        <button id="subscribe-button" onclick="sendSubscriptionEmail()">SUSCRIBIRME</button>
+        <p>Suscríbase a nuestro boletín de noticias para obtener contenido, ofertas y servicios exclusivos y acceso anticipado a nuestros productos.</p>
+      </div>
+    </div>
+
+
+
+    <br>
+
+
+    <!-- CARRITO -->
+    <div class="cart-overlay" id="cart-overlay">
+      <div class="cart-sidebar">
+        <div class="cart-header">
+          <h3>Carrito de Compras</h3>
+          <i class="fas fa-times close-cart" id="close-cart"></i>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+          <div class="cart-totals">
+            <p>Total: <span id="cart-total">$0</span></p>
+          </div>
+          <div class="cart-actions">
+            <button id="realizar-compra">Realizar compra</button>
+            <button id="clear-cart">Vaciar Carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="logo-footer">
+        <img src="img/logofinal3.png" alt="logo2">
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>BAR THREE BLACKS</h4>
+          <p>7 0914 6149 </p>
+        </div>
+        <div class="footer-col1">
+          <h4>Información</h4>
+          <ul>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Políticas de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col2">
+          <h4>Síguenos</h4>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook-f"></i>
+                Facebook</a></li>
+            <li><a
+                href="https://www.instagram.com/reel/C3oqoD0triO/?igsh=MWV5N3B1eGN6cHJoZA==
+        "><i class="fab fa-instagram"></i> Instagram</a></li>
+
+          </div>
+
+          <div class="footer-col3">
+          </ul>
+          <h4>Medios de pago</h4>
+          <ul class="payment-icons">
+            <li><img src="img/bancochile.png" alt="Banco de Chile">Banco de Chile</li>
+            <li><img src="img/juna.png" alt="Junaeb EdenRed">Junaeb EdenRed</li>
+            <li><img src="img/webpay.png" alt="Webpay Plus">Webpay Plus</li>
+            <li><img src="img/riotgamesserio.png" alt="Riot Points">Riot Points</li>
+          </ul>
+        </div>
+
+      </div>
+      <br>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="scriptinicio.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  </body>
+</html>
+

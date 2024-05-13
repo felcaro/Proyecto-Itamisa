@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Bebidas</title>
+  <link rel="stylesheet" href="estiloalcohol.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-************" crossorigin="anonymous" />
+</head>
+<body>
+  <header>
+    <div class="main-header">
+      <a href="inicio.html">
+        <div class="logoinsano">
+          <img src="img/logofinal3.png" alt="logo">
+        </div>
+      </a>
+
+      <div class="buscador">
+        <input class="buscador-input" type="text"
+          placeholder="¿Qué estás buscando?">
+      </div>
+      <div class="icon1">
+        <a href="registro.html" class="cart-icon1">
+          <i class="fas fa-user"></i>
+        </a>
+        <span class="icon-text">Usuario</span>
+      </div>
+      <div class="icon2">
+        <a href="#" class="cart-icon" id="cart-icon">
+          <i class="fa fa-shopping-cart"></i>
+          <span id="cart-count">0</span>
+        </a> 
+        <span class="icon-text">Carrito</span>
+      </div>
+    </div>
+    <nav>
+      <div class="dropdown">
+        <a href="inicio.html">PAGINA INICIO </a>
+      </div>
+
+      <div class="dropdown">
+        <a href="vinos.html">OFERTAS</a>
+        <div class="dropdown-menu">
+          <a href="vinos.html">Ofertas de La Semana</a>
+          <a href="vinos.html">Recetas</a>
+
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="cervezas.html">CERVEZAS</a>
+        <div class="dropdown-menu">
+          <a href="cervezas.html">Artesanales </a>
+          <a href="cervezas.html">Nacional </a>
+          <a href="cervezas.html">Importada</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="vinos.html">VINOS</a>
+        <div class="dropdown-menu">
+          <a href="vinos.html">Vinos Tintos </a>
+          <a href="vinos.html">Vinos Blancos</a>
+
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="destilados.html">DESTILADOS</a>
+        <div class="dropdown-menu">
+          <a href="destilados.html">Whisky</a>
+          <a href="destilados.html">Tequila</a>
+          <a href="destilados.html">Pisco</a>
+          <a href="destilados.html">Gin</a>
+          <a href="destilados.html">Vodka</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="licores.html">LICORES</a>
+        <div class="dropdown-menu">
+          <a href="licores.html">Mix Cocktails</a>
+          <a href="licores.html">Sour</a>
+          <a href="licores.html">Variedad Cocktails</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="bebidas.html">BEBIDAS</a>
+        <div class="dropdown-menu">
+          <a href="bebidas.html">Gaseosa</a>
+          <a href="bebidas.html">Minerales</a>
+          <a href="bebidas.html">Jugos</a>
+        </div>
+      </div>
+
+      
+    </nav>
+  </header>
+
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>CATEGORÍA</h3>
+      <p id="categoria-selected">Cervezas</p>
+      <h3>CEPAS</h3>
+      <ul>
+        <li><a href="#" data-cepa="Cabernet Sauvignon">Cabernet Sauvignon</a></li>
+        <li><a href="#" data-cepa="Carmenere">Lata</a></li>
+        <li><a href="#" data-cepa="Chardonnay">Sin Alcohol</a></li>
+       
+      </ul>
+      <h3>PRECIOS</h3>
+      <ul>
+        <li><a href="#" data-precio="5000-10000">$5.000 - $10.000</a></li>
+        <li><a href="#" data-precio="10000-15000">$10.000 - $15.000</a></li>
+        <li><a href="#" data-precio="15000-20000">$15.000 - $20.000</a></li>
+        <li><a href="#" data-precio="20000+">Más de $20.000</a></li>
+      </ul>
+      <h3>formato</h3>
+    <ul>
+      <li><a href="#" data-tipo="330cc">330cc</a></li>
+      <li><a href="#" data-tipo="355cc">355cc</a></li>
+      <li><a href="#" data-tipo="470cc">470cc</a></li>
+      <li><a href="#" data-tipo="500cc">500cc</a></li>
+      <li><a href="#" data-tipo="650cc">650cc</a></li>
+      <li><a href="#" data-tipo="710cc">710cc</a></li>
+
+
+    </ul>
+    </div>
+
+
+
+
+
+
+
+  <main>
+    <section class="product-section" id="vinos-tintos">
+      <h2>Categoría: Cervezas Artesanales</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://brindo.cl/113-large_default/1x-austral-yagan-5-botella-330cc.jpg" alt="Producto 1">
+          <h3>Austral Yagan 5° Botella 330cc</h3>
+          <p class="price">$1.750 <span class="discount">-5%</span></p>
+          <button data-producto='{"id": 30, "nombre": "Austral Yagan 5° Botella 330cc", "precio": 1750, "descuento": 5, "imagen": "https://brindo.cl/113-large_default/1x-austral-yagan-5-botella-330cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/1090-large_default/1x-imperial-46-lata-470cc.jpg" alt="Producto 1">
+          <h3>Austral Calafate 5° Botella 330cc</h3>
+          <p class="price">$1.690 <span class="discount">-6%</span></p>
+          <button data-producto='{"id": 31, "nombre": "Austral Calafate 5° Botella 330cc", "precio": 1750, "descuento": 6, "imagen": "https://brindo.cl/1090-large_default/1x-imperial-46-lata-470cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/120-large_default/1x-kross-ipa-65-botella-330cc.jpg" alt="Producto 1">
+          <h3>Kross IPA 6,5° Botella 330cc</h3>
+          <p class="price">$2.690 <span class="discount">-7%</span></p>
+          <button data-producto='{"id": 32, "nombre": "Kross IPA 6,5° Botella 330cc", "precio": 2690, "descuento": 7, "imagen": "https://brindo.cl/120-large_default/1x-kross-ipa-65-botella-330cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/122-large_default/1x-kross-stout-46-botella-330cc.jpg" alt="Producto 1">
+          <h3>Kross Stout 4,6° Botella 330cc</h3>
+          <p class="price">$1.990 <span class="discount">-5%</span></p>
+          <button data-producto='{"id": 33, "nombre": "Kross Stout 4,6° Botella 330cc", "precio": 1900, "descuento": 5, "imagen": "https://brindo.cl/122-large_default/1x-kross-stout-46-botella-330cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/110-large_default/1x-austral-pale-ale-5-botella-330cc.jpg" alt="Producto 1">
+          <h3>Austral Pale Ale 5° Botella 330cc</h3>
+          <p class="price">$1.790 <span class="discount">-8%</span></p>
+          <button data-producto='{"id": 34, "nombre": "Casillero del Diablo Merlot Botella 750cc", "precio": 1790, "descuento": 8, "imagen": "https://brindo.cl/110-large_default/1x-austral-pale-ale-5-botella-330cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/678-large_default/1x-kunstmann-torobayo-5-lata-470cc.jpg" alt="Producto 1">
+          <h3>Kunstmann Torobayo 5° Lata 470cc</h3>
+          <p class="price">$1.990 <span class="discount">-15%</span></p>
+          <button data-producto='{"id": 35, "nombre": "Castillo de Molina Reserva Merlot Botella 750cc", "precio": 1900, "descuento": 15, "imagen": "https://brindo.cl/678-large_default/1x-kunstmann-torobayo-5-lata-470cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/119-large_default/1x-kross-golden-ale-52-botella-710cc.jpg" alt="Producto 1">
+          <h3>Kross Golden Ale 5,2° Botella 710cc</h3>
+          <p class="price">$2.690 <span class="discount">-37%</span></p>
+          <button data-producto='{"id": 36, "nombre": "Kross Golden Ale 5,2° Botella 710cc", "precio": 2690, "descuento": 37, "imagen": "https://brindo.cl/119-large_default/1x-kross-golden-ale-52-botella-710cc.jpg"}'>AGREGAR</button>
+        </div>
+        <div class="product-card">
+          <img src="https://brindo.cl/89-large_default/1x-austral-46-botella-330cc.jpg" alt="Producto 1">
+          <h3>Austral 4,6° Botella 330cc</h3>
+          <p class="price">$1.750<span class="discount">-7%</span></p>
+          <button data-producto='{"id": 37, "nombre": "Austral 4,6° Botella 330cc", "precio": 1750, "descuento": 7, "imagen": "https://brindo.cl/89-large_default/1x-austral-46-botella-330cc.jpg"}'>AGREGAR</button>
+        </div>
+       
+      </div>
+    </section>
+    
+    <main>
+      <section class="product-section" id="vinos-blancos">
+        <h2>Categoría: Cervezas nacionales </h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://brindo.cl/128-large_default/1x-dolbek-maqui-48-botella-330.jpg" alt="Producto 1">
+            <h3>Dolbek Maqui 4,8° Botella 330</h3>
+            <p class="price">$1.990 <span class="discount">-14%</span></p>
+            <button data-producto='{"id": 41, "nombre": "Montes Limited Selection Carmenere Botella 750cc", "precio": 1990, "descuento": 14, "imagen": "https://brindo.cl/128-large_default/1x-dolbek-maqui-48-botella-330.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/96-large_default/1x-austral-torres-del-paine-61-botella-500cc.jpg" alt="Producto 1">
+            <h3>Austral Torres del Paine 6,1° Botella 500cc</h3>
+            <p class="price">$2.190 <span class="discount">-16%</span></p>
+            <button data-producto='{"id": 42, "nombre": "Austral Torres del Paine 6,1° Botella 500cc", "precio": 2190, "descuento": 16, "imagen": "https://brindo.cl/96-large_default/1x-austral-torres-del-paine-61-botella-500cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/95-large_default/1x-kunstmann-miel-48-botella-330c.jpg" alt="Producto 1">
+            <h3>Kunstmann Miel 4,8° Botella 330c</h3>
+            <p class="price">$1.890 <span class="discount">-15%</span></p>
+            <button data-producto='{"id": 43, "nombre": "Kunstmann Miel 4,8° Botella 330c", "precio": 1890, "descuento": 15, "imagen": "https://brindo.cl/95-large_default/1x-kunstmann-miel-48-botella-330c.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/91-large_default/1x-kunstmann-gran-torobayo-75-botella-500cc.jpg" alt="Producto 1">
+            <h3>Kunstmann Gran Torobayo 7,5° Botella 500cc</h3>
+            <p class="price">$2.990 <span class="discount">-7%</span></p>
+            <button data-producto='{"id": 44, "nombre": "Kunstmann Gran Torobayo 7,5° Botella 500cc", "precio": 2900, "descuento": 7, "imagen": "https://brindo.cl/91-large_default/1x-kunstmann-gran-torobayo-75-botella-500cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/79-large_default/1x-baltica-58-lata-473cc.jpg" alt="Producto 1">
+            <h3>Baltica 5,8° Lata 473cc</h3>
+            <p class="price">$650 <span class="discount">-55%</span></p>
+            <button data-producto='{"id": 45, "nombre": "Baltica 5,8° Lata 473cc", "precio": 650, "descuento": 55, "imagen": "https://brindo.cl/79-large_default/1x-baltica-58-lata-473cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/99-large_default/1x-escudo-55-lata-470cc.jpg" alt="Producto 1">
+            <h3>Escudo 5,5° Lata 470cc</h3>
+            <p class="price">$990 <span class="discount">-22%</span></p>
+            <button data-producto='{"id": 46, "nombre": "Escudo 5,5° Lata 470cc, "precio": 990, "descuento": 22, "imagen": "https://brindo.cl/99-large_default/1x-escudo-55-lata-470cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/77-large_default/1x-becker-45-lata-473cc.jpg" alt="Producto 1">
+            <h3>Becker 4,5° Lata 473cc</h3>
+            <p class="price">$690 <span class="discount">-52%</span></p>
+            <button data-producto='{"id": 47, "nombre": "Becker 4,5° Lata 473cc", "precio": 690, "descuento": 52, "imagen": "https://brindo.cl/77-large_default/1x-becker-45-lata-473cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/1102-large_default/1x-austral-calafate-5-botella-330cc.jpg" alt="Producto 1">
+            <h3>Royal Guard 5° Lata 470cc</h3>
+            <p class="price">$1.100 <span class="discount">-42%</span></p>
+            <button data-producto='{"id": 48, "nombre": "Royal Guard 5° Lata 470cc", "precio": 1100, "descuento": 42, "imagen": "https://brindo.cl/1102-large_default/1x-austral-calafate-5-botella-330cc.jpg"}'>AGREGAR</button>
+          </div>
+        
+        </div>
+      </section>
+      
+      <main>
+        <section class="product-section" id="espumantes">
+          <h2>Categoría: Cervezas Importadas</h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="https://brindo.cl/1001-large_default/1x-andes-lata-45-470cc.jpg" alt="Producto 1">
+              <h3>Andes Lata 4,5° 470cc</h3>
+              <p class="price">$750 <span class="discount">-12%</span></p>
+              <button data-producto='{"id": 49, "nombre": "Andes Lata 4,5° 470cc", "precio": 750, "descuento": 12, "imagen": "https://brindo.cl/1001-large_default/1x-andes-lata-45-470cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/117-large_default/1x-miller-gen-draft-47-lata-473cc.jpg" alt="Producto 1">
+              <h3>Miller Gen Draft 4,7° Lata 473cc</h3>
+              <p class="price">$1.590 <span class="discount">-12%</span></p>
+              <button data-producto='{"id": 50, "nombre": "Miller Gen Draft 4,7° Lata 473cc", "precio": 1590, "descuento": 12, "imagen": "https://brindo.cl/117-large_default/1x-miller-gen-draft-47-lata-473cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/85-large_default/1x-corona-45-botella-330cc.jpg" alt="Producto 1">
+              <h3>Corona 4,5° Botella 330cc</h3>
+              <p class="price">$1.100 <span class="discount">-48%</span></p>
+              <button data-producto='{"id": 51, "nombre": "Corona 4,5° Botella 330cc", "precio": 1100, "descuento": 48, "imagen": "https://brindo.cl/85-large_default/1x-corona-45-botella-330cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/676-large_default/1x-imperial-46-lata-470cc.jpg" alt="Producto 1">
+              <h3>Imperial 4,6° Lata 470cc</h3>
+              <p class="price">$990 <span class="discount">-25%</span></p>
+              <button data-producto='{"id": 52, "nombre": "Imperial 4,6° Lata 470cc", "precio": 9900, "descuento": 25, "imagen": "https://brindo.cl/676-large_default/1x-imperial-46-lata-470cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/1128-large_default/1x-becker-negra-59-lata-473cc.jpg" alt="Producto 1">
+              <h3>Coors 5° Lata 470cc</h3>
+              <p class="price">$1.100 <span class="discount">-14%</span></p>
+              <button data-producto='{"id": 53, "nombre": "Montes Limited Selection Carmenere Botella 750cc", "precio": 9900, "descuento": 12, "imagen": "https://brindo.cl/1128-large_default/1x-becker-negra-59-lata-473cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/3303-large_default/1x-estrella-damm-54-lata-500cc.jpg" alt="Producto 1">
+              <h3>Estrella Damm 5.4° Lata 500cc</h3>
+              <p class="price">$1.690 <span class="discount">-14%</span></p>
+              <button data-producto='{"id": 54, "nombre": "Estrella Damm 5.4° Lata 500cc", "precio": 1690, "descuento": 14, "imagen": "https://brindo.cl/3303-large_default/1x-estrella-damm-54-lata-500cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/681-large_default/1x-heineken-5-lata-470cc.jpg" alt="Producto 1">
+              <h3>Heineken 5° Lata 470cc</h3>
+              <p class="price">$1.100 <span class="discount">-5%</span></p>
+              <button data-producto='{"id": 55, "nombre": "Heineken 5° Lata 470cc", "precio": 1100, "descuento": 5, "imagen": "https://brindo.cl/681-large_default/1x-heineken-5-lata-470cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/3186-large_default/1x-baltica-58-lata-473cc.jpg" alt="Producto 1">
+              <h3>Stella Artois 5° Botella 330cc</h3>
+              <p class="price">$1.100 <span class="discount">-8%</span></p>
+              <button data-producto='{"id": 56, "nombre": "Stella Artois 5° Botella 330cc", "precio": 1100, "descuento": , "imagen": "https://brindo.cl/3186-large_default/1x-baltica-58-lata-473cc.jpg"}'>AGREGAR</button>
+            </div>
+            
+            
+          </div>
+        </section>
+
+  </main>
+</div>
+
+
+<div class="cart-overlay" id="cart-overlay">
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Carrito de Compras</h3>
+      <i class="fas fa-times close-cart" id="close-cart"></i>
+    </div>
+    <div id="cart-items">
+      <!-- -->
+    </div>
+    <div class="cart-actions">
+      <button id="realizar-compra">Realizar compra</button>
+    </div>
+    <div class="cart-totals">
+      <p>Total: <span id="cart-total">$0</span></p>
+      <button id="clear-cart">Vaciar Carrito</button>
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>LA BARRA</h4>
+        <p>600 450 2502</p>
+      </div>
+      <div class="footer-col">
+        <h4>Información</h4>
+        <ul>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Políticas de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Medios de pago</h4>
+        <ul class="payment-icons">
+          <li><img src="ruta/banco-de-chile.png" alt="Banco de Chile"></li>
+          <li><img src="webpay.png" alt="Webpay Plus"></li>
+          <li><img src="mercado-pago.png" alt="Mercado Pago"></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script src="scriptalcohol.js"></script>
+</body>
+</html>

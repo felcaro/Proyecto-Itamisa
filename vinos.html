@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Bebidas</title>
+  <link rel="stylesheet" href="estiloalcohol.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-************" crossorigin="anonymous" />
+</head>
+<body>
+  <header>
+    <div class="main-header">
+      <a href="inicio.html">
+        <div class="logoinsano">
+          <img src="img/logofinal3.png" alt="logo">
+        </div>
+      </a>
+
+      <div class="buscador">
+        <input class="buscador-input" type="text"
+          placeholder="¿Qué estás buscando?">
+      </div>
+      <div class="icon1">
+        <a href="registro.html" class="cart-icon1">
+          <i class="fas fa-user"></i>
+        </a>
+        <span class="icon-text">Usuario</span>
+      </div>
+      <div class="icon2">
+        <a href="#" class="cart-icon" id="cart-icon">
+          <i class="fa fa-shopping-cart"></i>
+          <span id="cart-count">0</span>
+        </a> 
+        <span class="icon-text">Carrito</span>
+      </div>
+    </div>
+    <nav>
+      <div class="dropdown">
+        <a href="inicio.html">PAGINA INICIO </a>
+      </div>
+
+      <div class="dropdown">
+          <a href="vinos.html">OFERTAS</a>
+          <div class="dropdown-menu">
+            <a href="vinos.html">Ofertas de La Semana</a>
+            <a href="vinos.html">Recetas</a>
+
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="cervezas.html">CERVEZAS</a>
+          <div class="dropdown-menu">
+            <a href="cervezas.html">Artesanales </a>
+            <a href="cervezas.html">Nacional </a>
+            <a href="cervezas.html">Importada</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="vinos.html">VINOS</a>
+          <div class="dropdown-menu">
+            <a href="vinos.html">Vinos Tintos </a>
+            <a href="vinos.html">Vinos Blancos</a>
+
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="destilados.html">DESTILADOS</a>
+          <div class="dropdown-menu">
+            <a href="destilados.html">Whisky</a>
+            <a href="destilados.html">Tequila</a>
+            <a href="destilados.html">Pisco</a>
+            <a href="destilados.html">Gin</a>
+            <a href="destilados.html">Vodka</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="licores.html">LICORES</a>
+          <div class="dropdown-menu">
+            <a href="licores.html">Mix Cocktails</a>
+            <a href="licores.html">Sour</a>
+            <a href="licores.html">Variedad Cocktails</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="bebidas.html">BEBIDAS</a>
+          <div class="dropdown-menu">
+            <a href="bebidas.html">Gaseosa</a>
+            <a href="bebidas.html">Minerales</a>
+            <a href="bebidas.html">Jugos</a>
+          </div>
+        </div>
+
+        
+      </nav>
+  </header>
+  </header>
+
+    <div class="container">
+      <div class="sidebar">
+        <h3>CATEGORÍA</h3>
+        <p id="categoria-selected">Vinos</p>
+        <h3>CEPAS</h3>
+        <ul>
+          <li><a href="#" data-cepa="Cabernet Sauvignon">Cabernet Sauvignon</a></li>
+          <li><a href="#" data-cepa="Carmenere">Carmenere</a></li>
+          <li><a href="#" data-cepa="Chardonnay">Chardonnay</a></li>
+          <li><a href="#" data-cepa="Ensamblaje">Ensamblaje</a></li>
+          <li><a href="#" data-cepa="Merlot">Merlot</a></li>
+          <li><a href="#" data-cepa="Otras Cepas">Otras Cepas</a></li>
+          <li><a href="#" data-cepa="Pack Vinos">Pack Vinos</a></li>
+          <li><a href="#" data-cepa="Sauvignon Blanc">Sauvignon Blanc</a></li>
+          <li><a href="#" data-cepa="Syrah">Syrah</a></li>
+        </ul>
+        <h3>PRECIOS</h3>
+        <ul>
+          <li><a href="#" data-precio="5000-10000">$5.000 - $10.000</a></li>
+          <li><a href="#" data-precio="10000-15000">$10.000 - $15.000</a></li>
+          <li><a href="#" data-precio="15000-20000">$15.000 - $20.000</a></li>
+          <li><a href="#" data-precio="20000+">Más de $20.000</a></li>
+        </ul>
+        <h3>TIPO</h3>
+      <ul>
+        <li><a href="#" data-tipo="Blanco">Blanco</a></li>
+        <li><a href="#" data-tipo="Rose">Rose</a></li>
+        <li><a href="#" data-tipo="Tinto">Tinto</a></li>
+      </ul>
+      </div>
+
+
+
+
+
+
+
+    <main>
+      <section class="product-section" id="vinos-tintos">
+        <h2>Categoría: Vinos tintos</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://brindo.cl/568-large_default/1x-montes-limited-selection-carmenere-botella-750cc.jpg" alt="Producto 1">
+            <h3>Montes Limited Selection Carmenere Botella 750cc</h3>
+            <p class="price">$9.990 <span class="discount">-12%</span></p>
+            <button data-producto='{"id": 1, "nombre": "Montes Limited Selection Carmenere Botella 750cc", "precio": 9900, "descuento": 12, "imagen": "https://brindo.cl/568-large_default/1x-montes-limited-selection-carmenere-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/584-large_default/1x-ventisquero-grey-carmenere-botella-750cc.jpg" alt="Producto 1">
+            <h3>Ventisquero Grey Carmenere Botella 750cc</h3>
+            <p class="price">$15.990 <span class="discount">-12%</span></p>
+            <button data-producto='{"id": 2, "nombre": "Ventisquero Grey Carmenere Botella 750cc", "precio": 12900, "descuento": 12, "imagen": "https://brindo.cl/584-large_default/1x-ventisquero-grey-carmenere-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/655-large_default/1x-tarapaca-reserva-cabernet-sauvignon-botella-750cc.jpg" alt="Producto 1">
+            <h3>Tarapacá Reserva Cabernet Sauvignon Botella 750cc</h3>
+            <p class="price">$20.990 <span class="discount">-13%</span></p>
+            <button data-producto='{"id": 3, "nombre": "Tarapacá Reserva Cabernet Sauvignon Botella 750cc", "precio": 6900, "descuento": 13, "imagen": "https://brindo.cl/655-large_default/1x-tarapaca-reserva-cabernet-sauvignon-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/565-large_default/1x-toro-de-piedra-gran-reserva-cabernet-suavignon-botella-750cc.jpg" alt="Producto 1">
+            <h3>Toro de Piedra Gran Reserva Cabernet Sauvignon Botella 750cc</h3>
+            <p class="price">$9.990 <span class="discount">-7%</span></p>
+            <button data-producto='{"id": 4, "nombre": "Toro de Piedra Gran Reserva Cabernet Sauvignon Botella 750cc", "precio": 9900, "descuento": 7, "imagen": "https://brindo.cl/565-large_default/1x-toro-de-piedra-gran-reserva-cabernet-suavignon-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/508-large_default/1x-casillero-del-diablo-merlot-botella-750cc.jpg" alt="Producto 1">
+            <h3>Casillero del Diablo Merlot Botella 750cc</h3>
+            <p class="price">$9.990 <span class="discount">-7%</span></p>
+            <button data-producto='{"id": 5, "nombre": "Casillero del Diablo Merlot Botella 750cc", "precio": 4590, "descuento": 7, "imagen": "https://brindo.cl/508-large_default/1x-casillero-del-diablo-merlot-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/546-large_default/1x-castillo-de-molina-reserva-merlot-botella-750cc.jpg" alt="Producto 1">
+            <h3>Castillo de Molina Reserva Merlot Botella 750cc</h3>
+            <p class="price">$9.990 <span class="discount">-7%</span></p>
+            <button data-producto='{"id": 6, "nombre": "Castillo de Molina Reserva Merlot Botella 750cc", "precio": 9900, "descuento": 7, "imagen": "https://brindo.cl/546-large_default/1x-castillo-de-molina-reserva-merlot-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/509-large_default/1x-casillero-del-diablo-syrah-botella-750cc.jpg" alt="Producto 1">
+            <h3>Casillero del Diablo Syrah Botella 750cc</h3>
+            <p class="price">$9.990 <span class="discount">-7%</span></p>
+            <button data-producto='{"id": 7, "nombre": "Casillero del Diablo Syrah Botella 750cc", "precio": 9900, "descuento": 7, "imagen": "https://brindo.cl/509-large_default/1x-casillero-del-diablo-syrah-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img src="https://brindo.cl/708-large_default/1x-marques-de-casa-concha-syrah-botella-750cc.jpg" alt="Producto 1">
+            <h3>Marqués de Casa Concha Syrah Botella 750cc</h3>
+            <p class="price">$9.990 <span class="discount">-7%</span></p>
+            <button data-producto='{"id": 8, "nombre": "Marqués de Casa Concha Syrah Botella 750cc", "precio": 9900, "descuento": 7, "imagen": "https://brindo.cl/708-large_default/1x-marques-de-casa-concha-syrah-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://brindo.cl/537-large_default/1x-diablo-dark-red-botella-750cc.jpg"
+              alt="Producto 1">
+            <h3>Diablo Dark Red Botella 750cc</h3>
+            <p class="price">$8.990 <span class="discount">-12%</span></p>
+            <button
+              data-producto='{"id": 9, "nombre": "Diablo Dark Red Botella 750cc", "precio": 8900, "descuento": 12, "imagen": "https://brindo.cl/537-large_default/1x-diablo-dark-red-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+              <img
+              src="https://brindo.cl/559-large_default/1x-chaman-reserva-ensamblaje-ca-cs-botella-750cc.jpg"
+              alt="Producto 1">
+            <h3>Chamán Reserva Ensamblaje CA/CS Botella 750cc</h3>
+            <p class="price">$9.500 <span class="discount">-20%</span></p>
+            <button
+              data-producto='{"id": 10, "nombre": "Chamán Reserva Ensamblaje CA/CS Botella 750cc", "precio": 9500, "descuento": 20, "imagen": "https://brindo.cl/559-large_default/1x-chaman-reserva-ensamblaje-ca-cs-botella-750cc.jpg"}'>AGREGAR</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://brindo.cl/598-large_default/1x-oveja-negra-single-vineyard-carignan-botella-750cc.jpg"
+              alt="Producto 1">
+            <h3>Oveja Negra Single Vineyard Carignan Botella 750cc</h3>
+            <p class="price">$13.990 <span class="discount">-10%</span></p>
+            <button
+              data-producto='{"id": 11, "nombre": "Oveja Negra Single Vineyard Carignan Botella 750cc", "precio": 13900, "descuento": 10, "imagen": "https://brindo.cl/598-large_default/1x-oveja-negra-single-vineyard-carignan-botella-750cc.jpg"}'>AGREGAR</button>
+          </div><div class="product-card">
+            <img
+              src="https://brindo.cl/707-large_default/1x-oveja-negra-reserva-ensamblaje-ca-me-botella-750cc.jpg"
+              alt="Producto 1">
+            <h3>Oveja Negra Reserva Ensamblaje CA/ME Botella 750cc</h3>
+            <p class="price">$8.990 <span class="discount">-10%</span></p>
+            <button
+              data-producto='{"id": 12, "nombre": "Oveja Negra Reserva Ensamblaje CA/ME Botella 750cc", "precio": 8900, "descuento": 10, "imagen": "https://brindo.cl/707-large_default/1x-oveja-negra-reserva-ensamblaje-ca-me-botella-750cc.jpg"}'>AGREGAR</button>
+          </div> 
+          
+          
+          
+        </div>
+      </section>
+      
+      <main>
+        <section class="product-section" id="vinos-blancos">
+          <h2>Categoría: Vinos blancos</h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="https://brindo.cl/618-large_default/1x-concha-y-toro-late-harvest-botella-375cc.jpg" alt="Producto 1">
+              <h3>Concha y Toro Late Harvest Botella 375cc</h3>
+              <p class="price">$4.990 <span class="discount">-5%</span></p>
+              <button data-producto='{"id": 13, "nombre": "Montes Limited Selection Carmenere Botella 750cc", "precio": 4900, "descuento": 5, "imagen": "https://brindo.cl/618-large_default/1x-concha-y-toro-late-harvest-botella-375cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/488-large_default/1x-dona-dominga-chardonnay-botella-750cc.jpg" alt="Producto 1">
+              <h3>Doña Dominga Chardonnay Botella 750cc</h3>
+              <p class="price">$5.990 <span class="discount">-12%</span></p>
+              <button data-producto='{"id": 14, "nombre": "Doña Dominga Chardonnay Botella 750cc", "precio": 5900, "descuento": 12, "imagen": "https://brindo.cl/488-large_default/1x-dona-dominga-chardonnay-botella-750cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/705-large_default/1x-casillero-del-diablo-chardonnay-botella-750cc.jpg" alt="Producto 1">
+              <h3>Casillero del Diablo Chardonnay Botella 750cc</h3>
+              <p class="price">$6.990 <span class="discount">-15%</span></p>
+              <button data-producto='{"id": 15, "nombre": "Tarapacá Reserva Cabernet Sauvignon Botella 750cc", "precio": 6990, "descuento": 15, "imagen": "https://brindo.cl/705-large_default/1x-casillero-del-diablo-chardonnay-botella-750cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/1121-large_default/1x-subercaseaux-moscato-botella-750cc.jpg" alt="Producto 1">
+              <h3>Adobe Emiliana Rosé Botella 750cc</h3>
+              <p class="price">$5.990 <span class="discount">-7%</span></p>
+              <button data-producto='{"id": 16, "nombre": "Adobe Emiliana Rosé Botella 750cc", "precio": 5990, "descuento": 7, "imagen": "https://brindo.cl/1121-large_default/1x-subercaseaux-moscato-botella-750cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/605-large_default/1x-casillero-del-diablo-late-harvest-rose-botella-375cc.jpg" alt="Producto 1">
+              <h3>Casillero del Diablo Late Harvest Rosé Botella 375cc</h3>
+              <p class="price">$4.900 <span class="discount">-2%</span></p>
+              <button data-producto='{"id": 17, "nombre": "Montes Limited Selection Carmenere Botella 750cc", "precio": 4900, "descuento": 2, "imagen": "https://brindo.cl/605-large_default/1x-casillero-del-diablo-late-harvest-rose-botella-375cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/493-large_default/1x-misiones-de-rengo-reserva-chardonnay-botella-750cc.jpg" alt="Producto 1">
+              <h3>Misiones de Rengo Reserva Chardonnay Botella 750cc</h3>
+              <p class="price">$5.900 <span class="discount">-18%</span></p>
+              <button data-producto='{"id": 18, "nombre": "Ventisquero Grey Carmenere Botella 750cc", "precio": 5900, "descuento": 18, "imagen": "https://brindo.cl/493-large_default/1x-misiones-de-rengo-reserva-chardonnay-botella-750cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/483-large_default/1x-emiliana-reserva-chardonnay-botella-700cc.jpg" alt="Producto 1">
+              <h3>Emiliana Reserva Chardonnay Botella 700cc</h3>
+              <p class="price">$5.990 <span class="discount">-13%</span></p>
+              <button data-producto='{"id": 19, "nombre": "Emiliana Reserva Chardonnay Botella 700cc", "precio": 5900, "descuento": 13, "imagen": "https://brindo.cl/483-large_default/1x-emiliana-reserva-chardonnay-botella-700cc.jpg"}'>AGREGAR</button>
+            </div>
+            <div class="product-card">
+              <img src="https://brindo.cl/534-large_default/1x-las-mulas-sauvignon-blanc-botella-750cc.jpg" alt="Producto 1">
+              <h3>Las Mulas Sauvignon Blanc Botella 750cc</h3>
+              <p class="price">$9.990 <span class="discount">-17%</span></p>
+              <button data-producto='{"id": 20, "nombre": "Toro de Piedra Gran Reserva Cabernet Sauvignon Botella 750cc", "precio": 9990, "descuento": 17, "imagen": "https://brindo.cl/534-large_default/1x-las-mulas-sauvignon-blanc-botella-750cc.jpg"}'>AGREGAR</button>
+            </div>
+            
+          
+          </div>
+        </section>
+        
+        <main>
+          <section class="product-section" id="espumantes">
+            <h2>Categoría: Espumantes</h2>
+            <div class="product-grid">
+              <div class="product-card">
+                <img src="https://brindo.cl/1139-large_default/1x-viu-manent-san-carlos-malbec-botella-750cc.jpg" alt="Producto 1">
+                <h3>Undurraga Extra Brut</h3>
+                <p class="price">$7.900 <span class="discount">-16%</span></p>
+                <button data-producto='{"id": 22, "nombre": "Undurraga Extra Brut", "precio": 7900, "descuento": 16, "imagen": "https://brindo.cl/1139-large_default/1x-viu-manent-san-carlos-malbec-botella-750cc.jpg"}'>AGREGAR</button>
+              </div>
+              <div class="product-card">
+                <img src="https://brindo.cl/477-large_default/1x-subercaseaux-brut-botella-750cc.jpg" alt="Producto 1">
+                <h3>Subercaseaux Brut Botella 750cc</h3>
+                <p class="price">$5.990 <span class="discount">-12%</span></p>
+                <button data-producto='{"id": 23, "nombre": "Subercaseaux Brut Botella 750cc", "precio": 5900, "descuento": 12, "imagen": "https://brindo.cl/477-large_default/1x-subercaseaux-brut-botella-750cc.jpg"}'>AGREGAR</button>
+              </div>
+              <div class="product-card">
+                <img src="https://brindo.cl/1137-large_default/1x-viu-manent-la-capilla-cabernet-sauvignon-botella-750cc.jpg" alt="Producto 1">
+                <h3>Undurraga Brut Royal</h3>
+                <p class="price">$6.990 <span class="discount">-50%</span></p>
+                <button data-producto='{"id": 24, "nombre": "Tarapacá Reserva Cabernet Sauvignon Botella 750cc", "precio": 6990, "descuento": 50, "imagen": "https://brindo.cl/1137-large_default/1x-viu-manent-la-capilla-cabernet-sauvignon-botella-750cc.jpg"}'>AGREGAR</button>
+              </div>
+              <div class="product-card">
+                <img src="https://brindo.cl/480-large_default/1x-undurraga-brut-botella-750cc.jpg" alt="Producto 1">
+                <h3>Undurraga Brut Botella 750cc</h3>
+                <p class="price">$9.990 <span class="discount">-35%</span></p>
+                <button data-producto='{"id": 25, "nombre": "Toro de Piedra Gran Reserva Cabernet Sauvignon Botella 750cc", "precio": 9990, "descuento": 35, "imagen": "https://brindo.cl/480-large_default/1x-undurraga-brut-botella-750cc.jpg"}'>AGREGAR</button>
+              </div>
+              <div class="product-card">
+                <img src="https://brindo.cl/497-large_default/1x-vina-mar-brut-botella-375cc.jpg" alt="Producto 1">
+                <h3>Viña Mar Brut Botella 375cc</h3>
+                <p class="price">$4.590 <span class="discount">-23%</span></p>
+                <button data-producto='{"id": 26, "nombre": "Viña Mar Brut Botella 375cc", "precio": 4590, "descuento": 23, "imagen": "https://brindo.cl/497-large_default/1x-vina-mar-brut-botella-375cc.jpg"}'>AGREGAR</button>
+              </div>
+              <div class="product-card">
+                <img src="https://brindo.cl/639-large_default/1x-misiones-de-rengo-demi-sec-botella-750cc.jpg" alt="Producto 1">
+                <h3>Misiones de Rengo Demi Sec Botella 750cc</h3>
+                <p class="price">$6.290 <span class="discount">-12%</span></p>
+                <button data-producto='{"id": 27, "nombre": "Misiones de Rengo Demi Sec Botella 750cc", "precio": 6290, "descuento": 12, "imagen": "https://brindo.cl/639-large_default/1x-misiones-de-rengo-demi-sec-botella-750cc.jpg"}'>AGREGAR</button>
+              </div>
+              <div class="product-card">
+                <img src="https://brindo.cl/531-large_default/1x-undurraga-demi-sec-botella-750cc.jpg" alt="Producto 1">
+                <h3>Undurraga Demi Sec Botella 750cc</h3>
+                <p class="price">$7.900 <span class="discount">-24%</span></p>
+                <button data-producto='{"id": 28, "nombre": "Undurraga Demi Sec Botella 750cc", "precio": 7900, "descuento": 24, "imagen": "https://brindo.cl/531-large_default/1x-undurraga-demi-sec-botella-750cc.jpg"}'>AGREGAR</button>
+              </div>
+              <div class="product-card">
+                <img src="https://brindo.cl/478-large_default/1x-subercaseaux-moscato-botella-750cc.jpg" alt="Producto 1">
+                <h3>Subercaseaux Moscato Botella 750cc</h3>
+                <p class="price">$5.900 <span class="discount">-23%</span></p>
+                <button data-producto='{"id": 29, "nombre": "Subercaseaux Moscato Botella 750cc", "precio": 5900, "descuento": 23, "imagen": "https://brindo.cl/478-large_default/1x-subercaseaux-moscato-botella-750cc.jpg"}'>AGREGAR</button>
+              </div>
+              
+              
+            </div>
+          </section>
+  
+    </main>
+  </div>
+
+  <!-- CARRITO -->
+  <div class="cart-overlay" id="cart-overlay">
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h3>Carrito de Compras</h3>
+        <i class="fas fa-times close-cart" id="close-cart"></i>
+      </div>
+      <div id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-totals">
+          <p>Total: <span id="cart-total">$0</span></p>
+        </div>
+        <div class="cart-actions">
+          <button id="realizar-compra">Realizar compra</button>
+          <button id="clear-cart">Vaciar Carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>LA BARRA</h4>
+        <p>600 450 2502</p>
+      </div>
+      <div class="footer-col">
+        <h4>Información</h4>
+        <ul>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Políticas de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Medios de pago</h4>
+        <ul class="payment-icons">
+          <li><img src="ruta/banco-de-chile.png" alt="Banco de Chile"></li>
+          <li><img src="webpay.png" alt="Webpay Plus"></li>
+          <li><img src="mercado-pago.png" alt="Mercado Pago"></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script src="scriptalcohol.js"></script>
+</body>
+</html>
