@@ -40,13 +40,12 @@
       </div>
 
       <div class="dropdown">
-          <a href="vinos.html">OFERTAS</a>
-          <div class="dropdown-menu">
-            <a href="vinos.html">Ofertas de La Semana</a>
-            <a href="vinos.html">Recetas</a>
+        <a href="ofertas.html">OFERTAS</a>
+        <div class="dropdown-menu">
+          <a href="ofertas.html">Ofertas de La Semana</a>          
 
-          </div>
         </div>
+      </div>
 
         <div class="dropdown">
           <a href="cervezas.html">CERVEZAS</a>
@@ -348,58 +347,69 @@
   </div>
 
   <!-- CARRITO -->
-  <div class="cart-overlay" id="cart-overlay">
-    <div class="cart-sidebar">
-      <div class="cart-header">
-        <h3>Carrito de Compras</h3>
-        <i class="fas fa-times close-cart" id="close-cart"></i>
+<div class="cart-overlay" id="cart-overlay">
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Carrito de Compras</h3>
+      <i class="fas fa-times close-cart" id="close-cart"></i>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-totals">
+        <p>Total: <span id="cart-total">$0</span></p>
       </div>
-      <div id="cart-items"></div>
-      <div class="cart-footer">
-        <div class="cart-totals">
-          <p>Total: <span id="cart-total">$0</span></p>
-        </div>
-        <div class="cart-actions">
-          <button id="realizar-compra">Realizar compra</button>
-          <button id="clear-cart">Vaciar Carrito</button>
-        </div>
+      <div class="cart-actions">
+        <button id="realizar-compra">Realizar compra</button>
+        <button id="clear-cart">Vaciar Carrito</button>
       </div>
     </div>
   </div>
+</div>
 
   <footer>
-    <div class="footer-content">
-      <div class="footer-col">
-        <h4>LA BARRA</h4>
-        <p>600 450 2502</p>
+      <div class="logo-footer">
+        <img src="img/logofinal3.png" alt="logo2">
       </div>
-      <div class="footer-col">
-        <h4>Información</h4>
-        <ul>
-          <li><a href="#">Preguntas Frecuentes</a></li>
-          <li><a href="#">Términos y Condiciones</a></li>
-          <li><a href="#">Políticas de Privacidad</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Síguenos</h4>
-        <ul class="social-icons">
-          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Medios de pago</h4>
-        <ul class="payment-icons">
-          <li><img src="ruta/banco-de-chile.png" alt="Banco de Chile"></li>
-          <li><img src="webpay.png" alt="Webpay Plus"></li>
-          <li><img src="mercado-pago.png" alt="Mercado Pago"></li>
-        </ul>
-      </div>
-    </div>
 
-  </footer>
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>BAR THREE BLACKS</h4>
+          <p>7 0914 6149 </p>
+        </div>
+        <div class="footer-col1">
+          <h4>Información</h4>
+          <ul>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Políticas de Privacidad</a></li>
+          </ul>
+        </div>
 
+        <div class="footer-col2">
+          <h4>Síguenos</h4>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook-f"></i>
+                Facebook</a></li>
+            <li><a
+                href="https://www.instagram.com/reel/C3oqoD0triO/?igsh=MWV5N3B1eGN6cHJoZA==
+        "><i class="fab fa-instagram"></i> Instagram</a></li>
+
+          </div>
+
+          <div class="footer-col3">
+          </ul>
+          <h4>Medios de pago</h4>
+          <ul class="payment-icons">
+            <li><img src="img/bancochile.png" alt="Banco de Chile">Banco de Chile</li>
+            <li><img src="img/juna.png" alt="Junaeb EdenRed">Junaeb EdenRed</li>
+            <li><img src="img/webpay.png" alt="Webpay Plus">Webpay Plus</li>
+            <li><img src="img/riotgamesserio.png" alt="Riot Points">Riot Points</li>
+          </ul>
+        </div>
+
+      </div>
+      <br>
+    </footer>
 
   <script src="scriptalcohol.js"></script>
 </body>

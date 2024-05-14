@@ -30,7 +30,6 @@ $(document).ready(function () {
                       <p>Ingredientes:</p>
                       <ul>`;
   
-      // Iterar sobre los ingredientes y medidas
       for (var i = 1; i <= 15; i++) {
           var ingredient = cocktail["strIngredient" + i];
           var measure = cocktail["strMeasure" + i];
@@ -139,9 +138,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-
-
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileNav = document.querySelector('.mobile-nav');
 
@@ -152,9 +148,70 @@ mobileMenu.addEventListener('click', () => {
 
 
 
+const botonCambiarCiudad = document.getElementById('boton-cambiar-ciudad');
+const menuCiudades = document.getElementById('menu-ciudades');
+const overlay = document.querySelector('.overlay');
+const contenedor = document.querySelector('.contenedor');
+const listaCiudades = document.getElementById('lista-ciudades');
+const ciudadTexto = document.getElementById('ciudad-texto');
+const ciudades = ['Santiago', 'Viña del Mar', 'Valparaíso', 'Concepción', 'La Serena', 'Antofagasta', 'Temuco', 'Iquique', 'Rancagua', 'Talca'];
+
+// Función para llenar el select con las ciudades
+function llenarListaCiudades() {
+  ciudades.forEach(ciudad => {
+    const opcion = document.createElement('option');
+    opcion.value = ciudad;
+    opcion.textContent = ciudad;
+    listaCiudades.appendChild(opcion);
+  });
+}
+
+// Evento para mostrar el menú de ciudades
+botonCambiarCiudad.addEventListener('click', () => {
+  menuCiudades.style.display = 'block';
+  overlay.classList.add('visible');
+  contenedor.classList.add('opacado');
+});
+
+// Evento para ocultar el menú de ciudades
+document.getElementById('boton-cerrar').addEventListener('click', () => {
+  menuCiudades.style.display = 'none';
+  overlay.classList.remove('visible');
+  contenedor.classList.remove('opacado');
+});
+
+// Evento para actualizar la ciudad seleccionada
+document.getElementById('boton-aplicar').addEventListener('click', () => {
+  const ciudadSeleccionada = listaCiudades.value;
+  ciudadTexto.textContent = ciudadSeleccionada;
+  menuCiudades.style.display = 'none';
+  overlay.classList.remove('visible');
+  contenedor.classList.remove('opacado');
+});
+
+// Llamar a la función para llenar el select al cargar la página
+llenarListaCiudades();
 
 
 
+const modal = document.getElementById('modal-edad');
+const btnSi = document.getElementById('btn-si');
+const btnNo = document.getElementById('btn-no');
+
+// Mostrar el modal al cargar la página
+window.onload = function() {
+  modal.style.display = 'block';
+}
+
+// Ocultar el modal y permitir acceso al contenido si el usuario es mayor de edad
+btnSi.onclick = function() {
+  modal.style.display = 'none';
+}
+
+// Bloquear el acceso al contenido si el usuario no es mayor de edad
+btnNo.onclick = function() {
+  alert('Debes ser mayor de edad para acceder a este contenido.');
+}
 
 //carrito 
 const cartIcon = document.getElementById('cart-icon');
@@ -164,6 +221,7 @@ const cartItems = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
 const clearCartButton = document.getElementById('clear-cart');
 const cartCount = document.getElementById('cart-count');
+const realizarCompraButton = document.getElementById('realizar-compra');
 
 let cart = [];
 
@@ -173,12 +231,10 @@ function abrirCarrito() {
   renderizarCarrito();
 }
 
-// Función para cerrar el carrito
 function cerrarCarrito() {
   cartOverlay.style.display = 'none';
 }
 
-// Función para agregar un producto al carrito
 function agregarAlCarrito(producto) {
   cart.push(producto);
   actualizarContadorCarrito();
@@ -187,7 +243,7 @@ function agregarAlCarrito(producto) {
 
 // Función para renderizar el carrito
 function renderizarCarrito() {
-  cartItems.innerHTML = ''; // Limpiar el contenido previo del carrito
+  cartItems.innerHTML = ''; 
   let total = 0;
 
   cart.forEach((item, index) => {
@@ -206,7 +262,7 @@ function renderizarCarrito() {
     cartItems.appendChild(cartItem);
     total += item.precio * (1 - item.descuento / 100);
 
-    // Evento click para eliminar el producto del carrito
+    //eliminar el producto del carrito
     cartItem.querySelector('.remove-item-btn').addEventListener('click', (e) => {
       const itemIndex = e.target.dataset.index;
       cart.splice(itemIndex, 1);
@@ -248,10 +304,9 @@ addToCartButtons.forEach(button => {
   });
 });
 
-function realizarCompra() {
-  // Lógica para procesar el pago y completar la compra
-  // ...
 
+function realizarCompra() {
+  
   // Mostrar animación de "Gracias por su compra"
   const animacion = document.createElement('div');
   animacion.classList.add('compra-exitosa');
@@ -266,13 +321,14 @@ function realizarCompra() {
     animacion.classList.remove('mostrar');
     setTimeout(() => {
       document.body.removeChild(animacion);
-      cerrarCarrito(); // Cerrar el carrito después de la compra exitosa y la animación
+      cerrarCarrito(); 
     }, 500);
-  }, 3000);
+  }, 1500);
 
   // Vaciar el carrito después de la compra exitosa
   vaciarCarrito();
 }
+
 
 // JavaScript (sin cambios)
 
@@ -306,6 +362,7 @@ window.addEventListener('click', function(event) {
   }
 });
 
+
 // Función para procesar la respuesta de la API y mostrar las opciones de ubicación
 function displayLocations(data) {
   // Limpiar el contenido anterior del menú
@@ -329,6 +386,9 @@ function displayLocations(data) {
   }
 }
 
+
+
+
 // Agregar un indicador de carga
 const loadingIndicator = document.createElement('p');
 loadingIndicator.textContent = 'Cargando...';
@@ -337,7 +397,7 @@ dropdownMenu.appendChild(loadingIndicator);
 // Realizar solicitud a la API y mostrar las opciones de ubicación
 fetch('/api/locations', {
   headers: {
-    'Authorization': 'Bearer ' + token // Reemplaza 'token' con tu token de autenticación si es necesario
+    'Authorization': 'Bearer ' + token 
   }
 })
   .then(response => response.json())
@@ -347,12 +407,6 @@ fetch('/api/locations', {
     displayLocations(data);
   })
   .catch(error => console.error(error));
-
-
-
-
-
-
 
 
     const emailInput = document.getElementById('email-input');

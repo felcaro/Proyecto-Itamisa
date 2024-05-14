@@ -54,69 +54,6 @@ body {
 
 }
 
-/* Estilos para la barra superior */
-#location-dropdown {
-  position: relative;
-  text-align: center;
-}
-
-#location-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-#dropdown-toggle {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-#selected-location {
-  font-weight: bold;
-}
-
-#dropdown-menu {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  max-width: 400px;
-  width: 90%;
-  max-height: 60vh;
-  overflow-y: auto;
-}
-
-#dropdown-menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#dropdown-menu li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-}
-
-#dropdown-menu li:hover {
-  background-color: #f5f5f5;
-}
-
-.hidden {
-  display: none;
-}
-
 /* Estilos para el encabezado principal */
 .main-header {
   background-color: #ffffff;
@@ -149,7 +86,7 @@ body {
   max-width: 40vw;
   min-width: 130px;
   width: 30%;
-  font-size: 1vw;
+  font-size: 90%;
   height: 30px;
 }
 
@@ -289,73 +226,165 @@ nav a {
   nav {
     display: none;
   }
-
+}
  /* Estilos para la barra superior */
-#location-dropdown {
-  position: relative;
-  text-align: center;
-}
 
-#location-info {
+
+
+
+ .contenedor-principal {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
 }
 
-#dropdown-toggle {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+.contenedor {
+  background-color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  max-width: 400px;
+  color: #ffffff;
+}
+
+button {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 6px 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #444444;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#ciudad-texto {
+  font-size: 18px;
   margin-right: 10px;
 }
 
-#selected-location {
-  font-weight: bold;
+.ciudad-seleccionada {
+  display: flex;
+  align-items: center;
 }
 
-#dropdown-menu {
+.menu-ciudades {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #333333;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  max-width: 400px;
-  width: 90%;
-  max-height: 60vh;
-  overflow-y: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #ffffff;
+  z-index: 2;
 }
 
-#dropdown-menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.menu-ciudades select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+  border: 1px solid #555555;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 18px;
+  box-shadow: none;
+  transition: all 0.3s ease;
 }
 
-#dropdown-menu li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
+.menu-ciudades select:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-#dropdown-menu li:hover {
-  background-color: #f5f5f5;
+.botones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.hidden {
+.botones button {
+  margin-left: 5px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
   display: none;
-} 
-
+  backdrop-filter: blur(2px);
 }
 
-/*estilo para el carrito*/
+.overlay.visible {
+  display: block;
+}
+
+.contenedor.opacado {
+  opacity: 0.5;
+}
+
+/*  aa*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-contenido {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+.botones {
+  text-align: center;
+}
+
+.botones button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.contenido {
+  padding: 20px;
+  text-align: center;
+}
+ 
 /* Estilo para el carrito */
 .cart-overlay {
   position: fixed;
@@ -680,14 +709,16 @@ nav a {
   margin-bottom: 20px;
 }
 
-.recetas-container {
+.nuestras-recetas-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .receta {
-  width: calc(33.33% - 40px);
+  max-width: 270px;
+  min-width: 250px;
+  width: 100%;
   margin: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -753,34 +784,7 @@ nav a {
   font-size: 14px;
 }
 
-.card-animado {
-  perspective: 1000px;
-}
 
-.card-inner-animado {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.card-front-animado,
-.card-back-animado {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.card-back-animado {
-  transform: rotateY(180deg);
-}
-
-.card-animado:hover .card-inner-animado {
-  transform: rotateY(180deg);
-}
 
 /*estilo para la galeria */
 .gallery {
@@ -788,11 +792,15 @@ nav a {
   grid-template-columns: repeat(3, 345px);
   grid-gap: 10px;
   justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  position: relative; 
 }
 
 .gallery-item {
-  width: 345px;
-  height: 345px;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .gallery-item img {
@@ -802,12 +810,21 @@ nav a {
 }
 
 .gallery-item a {
-  display: block;
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
 }
 
+@media (max-width: 800px) {
+  .gallery {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
+  .gallery-item {
+    width: calc(33.33% - 50px); /* Ancho del 33.33% para tres elementos por fila, con espacio entre ellos */
+    margin-bottom: 10px; /* Espacio entre las filas */
+  }
+}
 
 
 /* estilo para suscripcion*/
@@ -920,14 +937,23 @@ footer {
 
 /* logo footer */
 .logo-footer {
-  height: 75px;
+  height: 90px;
 }
 
 .logo-footer img {
-  width: 7%;
-  max-width: 20%;
+  width: 100%;
+  max-width: 13%;
+  min-width: 7%;
 }
 
+.payment-icons img{
+  width: 20px;
+  height: 20px;
+  align-items: start;
+}
+
+
+/* COCTELES */
 .card {
   width: 200px;
   height: 350px;
@@ -1017,10 +1043,11 @@ footer {
 
 .cocktail-card {
   max-width: 200px;
+  width: 100%;
   margin: 10px;
-  border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
+  transition: max-width 0.5s;
 }
 
 .cocktail-image {
@@ -1047,10 +1074,76 @@ footer {
 }
 
 
+@media screen and (max-width: 800px) {
+  .card {
+  width: 160px;
+  height: 280px; 
+  }
+}
 
-.payment-icons img{
-  width: 20px;
-  height: 20px;
-  align-items: start;
+@media screen and (max-width: 540px) {
+  .card {
+  width: 128px;
+  height: 224px; 
+  }
+}
 
+
+.mobile-menu,
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 750px) {
+
+  .mobile-menu,
+  .mobile-nav {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  /* Estilos para el menú desplegable */
+  .mobile-menu {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .mobile-menu i {
+    font-size: 24px;
+  }
+
+  .mobile-nav {
+    display: none;
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+
+  .mobile-nav a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .mobile-nav .dropdown-menu {
+    display: none;
+    padding-left: 20px;
+    align-items: center;
+  }
+
+  .mobile-nav .dropdown-menu a {
+    border-bottom: none;
+  }
+
+  .show-menu {
+    display: block;
+  }
 }

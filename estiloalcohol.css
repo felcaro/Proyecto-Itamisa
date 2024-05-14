@@ -137,7 +137,7 @@
   max-width: 40vw;
   min-width: 130px;
   width: 30%;
-  font-size: 1vw;
+  font-size: 90%;
   height: 30px;
  }
  
@@ -196,7 +196,7 @@
   position: absolute;
   top: -10px;
   right: -10px;
-  
+  background-color: #ff6600;
   color: #fff;
   border-radius: 50%;
   width: 20px;
@@ -560,23 +560,17 @@ main {
 
 
 
-
-
-
-
-
-
-
-
-
 /* Estilos para el pie de página */
 footer {
   background-color: #333;
-  color: #f9f9f9;
-  padding: 40px 0;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-top: 5px;
 }
 
 .footer-content {
+
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -586,43 +580,56 @@ footer {
 
 .footer-col {
   flex-basis: 25%;
+  margin-bottom: auto;
+  max-width: 150px;
+}
+
+.footer-col1 a {
+  color: #ededed;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer-col2 {
+  flex-basis: 25%;
+  margin-bottom: auto;
+  max-width: 150px;
+}
+
+.footer-col2 a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ededed;
+}
+
+.footer-col3 {
+  flex-basis: 25%;
+  margin-bottom: auto;
+  max-width: 150px;
+}
+.titulo1{
+  text-align: center;
+  align-items: center;
+}
+
+.titulo1 h2{
+  font-size: 25px;
   margin-bottom: 20px;
 }
 
-.footer-col h4 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+/* logo footer */
+.logo-footer {
+  height: 75px;
 }
 
-.footer-col p,
-.footer-col1 a,
-.footer-col2 a {
-  color: #f9f9f9;
-  text-decoration: none;
-  margin-bottom: 5px;
-  display: block;
+.logo-footer img {
+  width: 7%;
+  max-width: 20%;
 }
+ 
+.payment-icons img{
+  width: 20px;
+  height: 20px;
+  align-items: start;
 
-.footer-col1 ul,
-.footer-col2 ul,
-.footer-col3 ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col1 li,
-.footer-col2 li,
-.footer-col3 li {
-  margin-bottom: 5px;
-}
-
-.footer-col1 a:hover,
-.footer-col2 a:hover {
-  color: #ff6600;
-}
-
-.payment-icons li {
-  margin-right: 10px;
-  display: inline-block;
 }

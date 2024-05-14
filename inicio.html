@@ -29,13 +29,21 @@
           <a href="#suscribirse">ÚNETENOS </a>
 
         </div>
-        <div id="location-dropdown">
-          <div id="location-info">
-            <button id="dropdown-toggle">Elegir ubicación</button>
-            <span id="selected-location"></span>
+        <div id="menu-ciudades" class="menu-ciudades">
+          <select id="lista-ciudades"></select>
+          <div class="botones">
+              <button id="boton-aplicar">Aplicar</button>
+              <button id="boton-cerrar">Cerrar</button>
           </div>
-          <div id="dropdown-menu" class="hidden"></div>
-        </div>
+      </div>
+  
+      <div class="contenedor">
+          <div class="ciudad-seleccionada">
+              <div id="ciudad-texto">Santiago</div>
+              <button id="boton-cambiar-ciudad">Cambiar Ciudad</button>
+          </div>
+      </div>
+        
       </div>
 
       <div class="main-header">
@@ -65,10 +73,9 @@
       </div>
       <nav>
         <div class="dropdown">
-          <a href="vinos.html">OFERTAS</a>
+          <a href="ofertas.html">OFERTAS</a>
           <div class="dropdown-menu">
-            <a href="vinos.html">Ofertas de La Semana</a>
-            <a href="vinos.html">Recetas</a>
+            <a href="ofertas.html">Ofertas de La Semana</a>          
   
           </div>
         </div>
@@ -129,20 +136,72 @@
         <i class="fas fa-bars"></i> Menú
       </div>
       <div class="mobile-nav">
-        <a href="#">OFERTAS</a>
-        <div class="dropdown-menu">
-          <a href="vinos.html">Ofertas de La Semana</a>
-          <a href="vinos.html">Recetas</a>
+        <div class="dropdown">
+          <a href="cervezas.html">CERVEZAS</a>
+          <div class="dropdown-menu">
+            <a href="cervezas.html">Artesanales </a>
+            <a href="cervezas.html">Nacional </a>
+            <a href="cervezas.html">Importada</a>
+          </div>
         </div>
-        <a href="cervezas.html">CERVEZAS</a>
-        <div class="dropdown-menu">
-          <a href="cervezas.html">Artesanales</a>
-          <a href="cervezas.html">Nacional</a>
-          <a href="cervezas.html">Importada</a>
+  
+        <div class="dropdown">
+          <a href="vinos.html">VINOS</a>
+          <div class="dropdown-menu">
+            <a href="vinos.html">Vinos Tintos </a>
+            <a href="vinos.html">Vinos Blancos</a>
+  
+          </div>
         </div>
-        <!-- Agrega el resto de las opciones de navegación aquí -->
+  
+        <div class="dropdown">
+          <a href="destilados.html">DESTILADOS</a>
+          <div class="dropdown-menu">
+            <a href="destilados.html">Whisky</a>
+            <a href="destilados.html">Tequila</a>
+            <a href="destilados.html">Pisco</a>
+            <a href="destilados.html">Gin</a>
+            <a href="destilados.html">Vodka</a>
+          </div>
+        </div>
+  
+        <div class="dropdown">
+          <a href="licores.html">LICORES</a>
+          <div class="dropdown-menu">
+            <a href="licores.html">Mix Cocktails</a>
+            <a href="licores.html">Sour</a>
+            <a href="licores.html">Variedad Cocktails</a>
+          </div>
+        </div>
+  
+        <div class="dropdown">
+          <a href="bebidas.html">BEBIDAS</a>
+          <div class="dropdown-menu">
+            <a href="bebidas.html">Gaseosa</a>
+            <a href="bebidas.html">Minerales</a>
+            <a href="bebidas.html">Jugos</a>
+          </div>
+        </div>
       </div>
     </header>
+
+
+
+
+
+    <div id="modal-edad" class="modal">
+      <div class="modal-contenido">
+        <h2>Verificación de edad</h2>
+        <p>¿Eres mayor de edad?</p>
+        <div class="botones">
+          <button id="btn-si">Sí</button>
+          <button id="btn-no">No</button>
+        </div>
+      </div>
+    </div>
+    <div class="contenido">
+      
+    </div>
 
     <br>
 
@@ -260,7 +319,7 @@
 
     <div class="nuestras-recetas">
       <h2>INFORMACION IMPORTANTE</h2>
-      <div class="recetas-container">
+      <div class="nuestras-recetas-container">
         <div class="receta">
           <img
             src="https://dondelanegra.cl/wp-content/uploads/2021/11/Collins-Pomelo-.jpg"
@@ -301,42 +360,42 @@
 
     <div class="gallery">
       <div class="gallery-item">
-        <a href="#" target="_blank">
+        <a href="destilados.html" target="_blank">
           <img
             src="https://dondelanegra.cl/wp-content/uploads/2022/06/TodoPiscos-400x400.jpg"
             alt="Imagen 1">
         </a>
       </div>
       <div class="gallery-item">
-        <a href="#" target="_blank">
+        <a href="vinos.html" target="_blank">
           <img
             src="https://dondelanegra.cl/wp-content/uploads/2022/06/TodoVinos-400x400.jpg"
             alt="Imagen 2">
         </a>
       </div>
       <div class="gallery-item">
-        <a href="#" target="_blank">
+        <a href="destilados.html" target="_blank">
           <img
             src="https://dondelanegra.cl/wp-content/uploads/2022/06/TodoWhiskey-400x400.jpg"
             alt="Imagen 3">
         </a>
       </div>
       <div class="gallery-item">
-        <a href="#" target="_blank">
+        <a href="destilados.html" target="_blank">
           <img
             src="https://dondelanegra.cl/wp-content/uploads/2022/07/TodoTequila-400x400.jpg"
             alt="Imagen 3">
         </a>
       </div>
       <div class="gallery-item">
-        <a href="#" target="_blank">
+        <a href="destilados.html" target="_blank">
           <img
             src="https://dondelanegra.cl/wp-content/uploads/2022/07/TodoGin-400x400.jpg"
             alt="Imagen 3">
         </a>
       </div>
       <div class="gallery-item">
-        <a href="#" target="_blank">
+        <a href="cervezas.html" target="_blank">
           <img
             src="https://dondelanegra.cl/wp-content/uploads/2022/06/TodoCervezas-400x400.jpg"
             alt="Imagen 3">

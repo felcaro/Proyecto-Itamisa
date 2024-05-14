@@ -5,6 +5,7 @@ const cartItems = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
 const clearCartButton = document.getElementById('clear-cart');
 const cartCount = document.getElementById('cart-count');
+const realizarCompraButton = document.getElementById('realizar-compra');
 
 let cart = [];
 
@@ -14,12 +15,10 @@ function abrirCarrito() {
   renderizarCarrito();
 }
 
-// Función para cerrar el carrito
 function cerrarCarrito() {
   cartOverlay.style.display = 'none';
 }
 
-// Función para agregar un producto al carrito
 function agregarAlCarrito(producto) {
   cart.push(producto);
   actualizarContadorCarrito();
@@ -28,7 +27,7 @@ function agregarAlCarrito(producto) {
 
 // Función para renderizar el carrito
 function renderizarCarrito() {
-  cartItems.innerHTML = ''; // Limpiar el contenido previo del carrito
+  cartItems.innerHTML = ''; 
   let total = 0;
 
   cart.forEach((item, index) => {
@@ -47,7 +46,7 @@ function renderizarCarrito() {
     cartItems.appendChild(cartItem);
     total += item.precio * (1 - item.descuento / 100);
 
-    // Evento click para eliminar el producto del carrito
+    //eliminar el producto del carrito
     cartItem.querySelector('.remove-item-btn').addEventListener('click', (e) => {
       const itemIndex = e.target.dataset.index;
       cart.splice(itemIndex, 1);
@@ -89,10 +88,9 @@ addToCartButtons.forEach(button => {
   });
 });
 
-function realizarCompra() {
-  // Lógica para procesar el pago y completar la compra
-  // ...
 
+function realizarCompra() {
+  
   // Mostrar animación de "Gracias por su compra"
   const animacion = document.createElement('div');
   animacion.classList.add('compra-exitosa');
@@ -107,13 +105,19 @@ function realizarCompra() {
     animacion.classList.remove('mostrar');
     setTimeout(() => {
       document.body.removeChild(animacion);
-      cerrarCarrito(); // Cerrar el carrito después de la compra exitosa y la animación
+      cerrarCarrito(); 
     }, 500);
-  }, 3000);
+  }, 1500);
 
   // Vaciar el carrito después de la compra exitosa
   vaciarCarrito();
 }
+
+
+// Agregar un event listener al botón
+realizarCompraButton.addEventListener('click', () => {
+  realizarCompra(); 
+});
 
 
 
@@ -138,29 +142,3 @@ const sidebar = document.getElementById('sidebar');
 toggleFilters.addEventListener('click', () => {
   sidebar.classList.toggle('show');
 });
-
-
-function realizarCompra() {
-  // Lógica para procesar el pago y completar la compra
-  // ...
-
-  // Mostrar animación de "Gracias por su compra"
-  const animacion = document.createElement('div');
-  animacion.classList.add('compra-exitosa');
-  animacion.textContent = 'Gracias por su compra!';
-  document.body.appendChild(animacion);
-
-  setTimeout(() => {
-    animacion.classList.add('mostrar');
-  }, 100);
-
-  setTimeout(() => {
-    animacion.classList.remove('mostrar');
-    setTimeout(() => {
-      document.body.removeChild(animacion);
-    }, 500);
-  }, 3000);
-
-  // Vaciar el carrito después de la compra exitosa
-  vaciarCarrito();
-}
