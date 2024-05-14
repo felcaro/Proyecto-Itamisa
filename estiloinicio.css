@@ -716,7 +716,7 @@ button:hover {
 }
 
 .receta {
-  max-width: 270px;
+  max-width: 25vw;
   min-width: 250px;
   width: 100%;
   margin: 20px;
