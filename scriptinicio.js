@@ -1,25 +1,25 @@
 $(document).ready(function () {
-  var cocktailIds = [11007, 17216, 17830, 11000, 11002, 11004, 11008, 11010, 11012, 11014,11001,11005];
+  var cocktailIds = [11007, 17216, 17830, 11000, 11002, 11004, 11008, 11010, 11012, 11014, 11001, 11005];
 
   cocktailIds.forEach(function (cocktailId) {
-      fetchCocktailDetails(cocktailId);
+    fetchCocktailDetails(cocktailId);
   });
 
   function fetchCocktailDetails(cocktailId) {
-      var url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + cocktailId;
-      $.getJSON(url, function (data) {
-          if (data.drinks) {
-              var cocktail = data.drinks[0];
-              var cardHtml = createCocktailCardHtml(cocktail);
-              $(".cocktail-container").append(cardHtml);
-          } else {
-              console.log("No se encontraron datos de cócteles en la respuesta de la API para el ID: " + cocktailId);
-          }
-      });
+    var url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + cocktailId;
+    $.getJSON(url, function (data) {
+      if (data.drinks) {
+        var cocktail = data.drinks[0];
+        var cardHtml = createCocktailCardHtml(cocktail);
+        $(".cocktail-container").append(cardHtml);
+      } else {
+        console.log("No se encontraron datos de cócteles en la respuesta de la API para el ID: " + cocktailId);
+      }
+    });
   }
 
   function createCocktailCardHtml(cocktail) {
-      var cardHtml = `
+    var cardHtml = `
           <div class='card'>
               <div class='card-inner'>
                   <div class='card-front'>
@@ -29,32 +29,32 @@ $(document).ready(function () {
                       <h2>${cocktail.strDrink}</h2>
                       <p>Ingredientes:</p>
                       <ul>`;
-  
-      for (var i = 1; i <= 15; i++) {
-          var ingredient = cocktail["strIngredient" + i];
-          var measure = cocktail["strMeasure" + i];
-          if (ingredient && measure) {
-              cardHtml += `<li>${measure} ${ingredient}</li>`;
-          } else if (ingredient) {
-              cardHtml += `<li>${ingredient}</li>`;
-          } else {
-              break;
-          }
+
+    for (var i = 1; i <= 15; i++) {
+      var ingredient = cocktail["strIngredient" + i];
+      var measure = cocktail["strMeasure" + i];
+      if (ingredient && measure) {
+        cardHtml += `<li>${measure} ${ingredient}</li>`;
+      } else if (ingredient) {
+        cardHtml += `<li>${ingredient}</li>`;
+      } else {
+        break;
       }
-  
-      cardHtml += `
+    }
+
+    cardHtml += `
                       </ul>
                   </div>
               </div>
           </div>`;
-  
-      return cardHtml;
+
+    return cardHtml;
   }
-  
+
 });
 
 
-$(document).ready(function() {
+$(document).ready(function () {
   $('.carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -73,71 +73,39 @@ $(document).ready(function() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2, // Mostrar dos imágenes en dispositivos móviles
+          slidesToShow: 2,
           slidesToScroll: 2
         }
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1, // Mostrar una imagen en pantallas muy pequeñas
+          slidesToShow: 1,
           slidesToScroll: 1
         }
       }
     ]
   });
 });
-// CAMBIAR LA DIRECCION
-document.addEventListener("DOMContentLoaded", function () {
-  const locationDropdown = document.querySelector('.location-dropdown');
-  const locationMenu = document.querySelector('.location-menu');
 
-  // Funcion para abrir el menu
-  function openMenu() {
-    locationMenu.style.display = 'block';
-  }
 
-  // Funcion para cerrar el menu
-  function closeMenu() {
-    locationMenu.style.display = 'none';
-  }
-
-  // Abrir el menu con click 
-  locationDropdown.addEventListener('click', function (event) {
-    openMenu();
-  });
-
-  // Cerrar el menu cuando elijo una opcion
-  locationMenu.addEventListener('click', function (event) {
-    if (event.target.tagName === 'A') {
-      const selectedLocation = event.target.textContent;
-      document.querySelector('.location input').value = selectedLocation;
-      closeMenu();
-    }
-  });
-
-  // Cerrar el menu al presionar afuera
-  document.addEventListener('click', function (event) {
-    if (!locationDropdown.contains(event.target) && !locationMenu.contains(event.target)) {
-      closeMenu();
-    }
-  });
-});
 
 // no perder focus en dropdown-menu
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const dropdownToggle = document.querySelector('.dropdown-toggle');
   const dropdownMenu = document.querySelector('.dropdown-menu');
 
-  dropdownToggle.addEventListener('click', function() {
+  dropdownToggle.addEventListener('click', function () {
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
   });
 
-  dropdownMenu.addEventListener('mouseleave', function() {
+  dropdownMenu.addEventListener('mouseleave', function () {
     dropdownMenu.style.display = 'none';
   });
 });
 
+
+// MENU PARA EL MENU
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileNav = document.querySelector('.mobile-nav');
 
@@ -199,17 +167,17 @@ const btnSi = document.getElementById('btn-si');
 const btnNo = document.getElementById('btn-no');
 
 // Mostrar el modal al cargar la página
-window.onload = function() {
+window.onload = function () {
   modal.style.display = 'block';
 }
 
 // Ocultar el modal y permitir acceso al contenido si el usuario es mayor de edad
-btnSi.onclick = function() {
+btnSi.onclick = function () {
   modal.style.display = 'none';
 }
 
 // Bloquear el acceso al contenido si el usuario no es mayor de edad
-btnNo.onclick = function() {
+btnNo.onclick = function () {
   alert('Debes ser mayor de edad para acceder a este contenido.');
 }
 
@@ -243,7 +211,7 @@ function agregarAlCarrito(producto) {
 
 // Función para renderizar el carrito
 function renderizarCarrito() {
-  cartItems.innerHTML = ''; 
+  cartItems.innerHTML = '';
   let total = 0;
 
   cart.forEach((item, index) => {
@@ -306,7 +274,10 @@ addToCartButtons.forEach(button => {
 
 
 function realizarCompra() {
-  
+
+
+
+
   // Mostrar animación de "Gracias por su compra"
   const animacion = document.createElement('div');
   animacion.classList.add('compra-exitosa');
@@ -321,7 +292,7 @@ function realizarCompra() {
     animacion.classList.remove('mostrar');
     setTimeout(() => {
       document.body.removeChild(animacion);
-      cerrarCarrito(); 
+      cerrarCarrito();
     }, 500);
   }, 1500);
 
@@ -330,7 +301,6 @@ function realizarCompra() {
 }
 
 
-// JavaScript (sin cambios)
 
 const dropdownToggle = document.getElementById('dropdown-toggle');
 const dropdownMenu = document.getElementById('dropdown-menu');
@@ -356,7 +326,7 @@ function selectLocation(location) {
 dropdownToggle.addEventListener('click', openDropdown);
 
 // Evento de clic fuera del menú para cerrarlo
-window.addEventListener('click', function(event) {
+window.addEventListener('click', function (event) {
   if (!dropdownMenu.contains(event.target) && !dropdownToggle.contains(event.target)) {
     closeDropdown();
   }
@@ -388,56 +358,34 @@ function displayLocations(data) {
 
 
 
+const emailInput = document.getElementById('email-input');
+const subscribeButton = document.getElementById('subscribe-button');
 
-// Agregar un indicador de carga
-const loadingIndicator = document.createElement('p');
-loadingIndicator.textContent = 'Cargando...';
-dropdownMenu.appendChild(loadingIndicator);
+// Reemplaza estas variables con tus claves de servicio de EmailJS
+const serviceID = 'service_niu6kwc';
+const templateID = 'template_kio32lm';
+const publicKey = 'PJlgqsnKcxvLYaGMI';
 
-// Realizar solicitud a la API y mostrar las opciones de ubicación
-fetch('/api/locations', {
-  headers: {
-    'Authorization': 'Bearer ' + token 
+// Inicializar EmailJS
+emailjs.init(publicKey);
+
+function sendSubscriptionEmail() {
+  const email = emailInput.value.trim();
+  if (email) {
+    const templateParams = {
+      from_email: email,
+    };
+
+    emailjs.send(serviceID, templateID, templateParams)
+      .then(() => {
+        alert('¡Te has suscrito exitosamente!');
+        emailInput.value = '';
+      })
+      .catch((error) => {
+        console.error('Error al suscribirse:', error);
+        alert('Ocurrió un error al suscribirse. Por favor, inténtalo de nuevo más tarde.');
+      });
+  } else {
+    alert('Por favor, ingresa un correo electrónico válido.');
   }
-})
-  .then(response => response.json())
-  .then(data => {
-    // Eliminar el indicador de carga
-    dropdownMenu.removeChild(loadingIndicator);
-    displayLocations(data);
-  })
-  .catch(error => console.error(error));
-
-
-    const emailInput = document.getElementById('email-input');
-  const subscribeButton = document.getElementById('subscribe-button');
-
-  // Reemplaza estas variables con tus claves de servicio de EmailJS
-  const serviceID = 'service_niu6kwc';
-  const templateID = 'template_kio32lm';
-  const publicKey = 'PJlgqsnKcxvLYaGMI';
-
-  // Inicializar EmailJS
-  emailjs.init(publicKey);
-
-  function sendSubscriptionEmail() {
-    const email = emailInput.value.trim();
-    if (email) {
-      const templateParams = {
-        from_email: email,
-      };
-
-      emailjs.send(serviceID, templateID, templateParams)
-        .then(() => {
-          alert('¡Te has suscrito exitosamente!');
-          emailInput.value = '';
-        })
-        .catch((error) => {
-          console.error('Error al suscribirse:', error);
-          alert('Ocurrió un error al suscribirse. Por favor, inténtalo de nuevo más tarde.');
-        });
-    } else {
-      alert('Por favor, ingresa un correo electrónico válido.');
-    }
-  }
-  
+}

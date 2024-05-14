@@ -142,3 +142,12 @@ const sidebar = document.getElementById('sidebar');
 toggleFilters.addEventListener('click', () => {
   sidebar.classList.toggle('show');
 });
+
+
+// MENU PARA EL MENU
+// const mobileMenu = document.querySelector('.mobile-menu');
+// const mobileNav = document.querySelector('.mobile-nav');
+
+// mobileMenu.addEventListener('click', () => {
+//   mobileNav.classList.toggle('show-menu');
+// });

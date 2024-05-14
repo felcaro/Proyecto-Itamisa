@@ -488,3 +488,47 @@ footer {
   align-items: start;
 
 }
+
+/*  Estilos para el menú desplegable */
+.mobile-menu {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mobile-menu i {
+  font-size: 24px;
+}
+
+.mobile-nav {
+  display: none;
+  background-color: #f1f1f1;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.mobile-nav .dropdown-menu {
+  display: none;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.mobile-nav .dropdown-menu a {
+  border-bottom: none;
+}
+
+.show-menu {
+  display: block;
+}
